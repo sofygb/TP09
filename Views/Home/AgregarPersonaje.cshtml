@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Agregar Personaje";
+}
+
+<form method= "post" action = '@Url.Action("GuardarPersonaje","Home")' enctype="multipart/form-data">
+    <div class="Agregar">
+        <div style="margin-left: 2rem; margin-right: 2rem; margin-bottom: 2rem;">
+            <input type = "hidden" name = "IdLibro" value="@ViewBag.IdLibro">
+        <br><br>
+        <label for="Nombre"><b>Nombre del personaje:</b></label>
+        <input type="text" name="Nombre">
+        <br><br>
+        <label for="FechaNacimiento"><b>Fecha de nacimiento:</b></label>
+        <input type="date" name="FechaNacimiento">
+        <br><br>
+        <label for="Genero"><b>Genero:</b></label>
+        <input type="text" name="Genero">
+        <br><br>
+        <label for="Nacionalidad"><b>Nacionalidad:</b></label>
+        <input type="text" name="Nacionalidad">
+        <br><br>
+        <label for="Estado"><b>Estado actual:</b><br />
+            <div style="margin-left: 2rem;">
+                <input type="radio" name="Estado" value="Vivo" id="Vivo"/>
+                <label for="Vivo">Vivo</label><br />
+                <input type="radio" name="Estado" value="Muerto" id="Muerto"/>
+                <label for="Muerto">Muerto</label><br />
+                <input type="radio" name="Estado" value="Desconocido" id="Desconocido"/>
+                <label for="Desconocido">Desconocido</label><br />
+                <input type="radio" name="Estado" value="Inmortal" id="Inmortal"/>
+                <label for="Inmortal">Inmortal</label>
+            </div>
+        </label> 
+        <br><br>
+        <label for="Foto"><b>Imagen/fanart:</b></label>
+        <input type="file" id="Foto" name="Foto">
+        <br><br>
+        <label for="Descripcion"><b>Descripción:</b></label>
+        <input type="text" name="Descripcion">
+        <br><br>
+        <button type="submit" class="btn btn-primary col-2 mb-2">Aceptar</button>
+        </div>
+    </div>
+</form>

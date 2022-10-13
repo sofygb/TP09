@@ -1,0 +1,91 @@
+@{
+    ViewData["Title"] = "Detalle Libro";
+}
+
+    <div class="container-fluid">
+        <h1 class="display-4 text-center"><b>@ViewBag.Libro.Nombre</b></h1>
+        <h3 class="display-4 text-center" id="autor">De @ViewBag.Libro.Autor</h3>
+        <p></p>
+        <div class="row">
+            <div class="col-md-6" style="display: flex;justify-content: flex-end;align-items: center;">
+                <img src="/img/@ViewBag.Libro.Portada" alt="Portada" width="300rem">
+            </div>
+            <div class="col-md-6" style="display: flex;justify-content: flex-start;align-items: center;">
+                <img src="/img/@ViewBag.Libro.Contraportada" alt="Contraportada" width="300rem">
+            </div>
+        </div>
+        
+        <br> <br>
+        @{
+            if(@ViewBag.Libro.Categoria != "ATP")
+            {
+                <p><b>Clasificado para @ViewBag.Libro.Categoria</b></p>
+            }
+            else if(@ViewBag.Libro.Categoria == "ATP")
+            {
+                <p><b>Clasificado para todo publico.</b></p>
+            }
+            if(@ViewBag.Libro.TW != ""){
+                <p><b>Advertencias este libro contiene:</b><br>@ViewBag.Libro.TW</p>
+            }
+        }
+        <p><b>Genero:</b><br>@ViewBag.Libro.Genero</p>
+        <p><b>Cantidad de páginas que contiene el libro:</b><br>@ViewBag.Libro.CantPaginas</p>
+        @{
+            if(@ViewBag.Libro.CantLibros > 1){
+                <p><b>Cantidad de Libros que contiene la saga en la que pertenece este libro:</b><br>@ViewBag.Libro.CantLibros</p>
+            }
+        }
+        <p><b>Sinopsis: </b><br> @ViewBag.Libro.Descripción</p>
+        <p><b>Personajes:</b><br></p>
+
+        <div class="row centrarElementos">
+                @{
+                    foreach (Personaje Pers in ViewBag.Personajes)
+                    {
+                        <div class="col-md-4 cardy">
+                            <div class="card" style="width: 18rem;">
+                                <img src="/img/@Pers.Foto" class="card-img-top" alt="Personaje">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 text-left">
+                                            <h3 class="card-title">@Pers.Nombre</h3>
+                                        </div>
+                                        <div class="col-md"></div>
+                                        <div class="col-md-2 derecha" style="justify-content: flex-end;">
+                                            <a href='@Url.Action("EliminarPersonaje", "Home", new {IdPersonaje = Pers.IdPersonaje, IdLibro = Pers.IdLibro})' alt="Eliminar personaje">
+                                                <img src="/img/basura.png" class="card-img-top">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <a href='@Url.Action("VerDetallePersonaje", "Home", new {IdPersonaje = Pers.IdPersonaje})' class="btn btn-primary"style="display: flex; align-items: center;justify-content: center;">Ver info</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            <div class="col-md-4 cardy">
+                <div class="BorderCard">
+                        <a href='@Url.Action("AgregarPersonaje", "Home")' alt="...">
+                            <img src="/img/add.png" class="card-img-top" width="0.1rem">
+                        </a>
+                    </div>
+                    <!-- <div class="card" style="width: 18rem;">
+                        <img src="/img/add.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <br>
+                            <br>
+                            <a href='Url.Action("AgregarPersonaje", "Home")' class="btn btn-primary">Agregar personaje</a>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+

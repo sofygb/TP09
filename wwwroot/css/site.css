@@ -1,0 +1,134 @@
+html {
+  font-size: 14px;
+}
+
+.Agregar{
+  border-style:groove;
+  background-color: rgba(162, 144, 144, 0.54);
+  margin: 1rem;
+}
+
+.CuadroDeInfoPers{
+  word-wrap: break-word; display: flex; justify-content: flex-start;
+}
+
+.centrarElementos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orden {
+  padding: 2rem;
+  text-align: justify;
+}
+
+.cardy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.derecha {
+  width: 50px;
+  height: auto;
+  justify-content: right;
+}
+
+.izquierda {
+  display: flex;
+  justify-content: left;
+}
+
+.BorderCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+  width: 20rem;
+  height: 23rem;
+  border-style: solid;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-top-color: rgba(0, 0, 0, 0.125);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: rgba(0, 0, 0, 0.125);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.125);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgba(0, 0, 0, 0.125);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  border-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem rem;
+}
+
+.borde {
+  border-style: hidden;
+  background-color: rgba(162, 144, 144, 0.54);
+}
+
+.texto {
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify;
+}
+
+#autor {
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  html {
+      font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item>div {
+      display: none;
+  }
+  .carousel-inner .carousel-item>div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+/* display 3 */
+
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+  }
+  .carousel-inner .carousel-item-left.active,
+  .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+  }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+  transform: translateX(0);
+}
