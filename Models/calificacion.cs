@@ -1,4 +1,4 @@
-namespace TP_09.Models
+namespace TP09.Models
 {
     public class calificacion
     {
