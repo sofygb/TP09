@@ -4,18 +4,18 @@ namespace TP09.Models
     {
         private int _IdBiblioteca;
         private int _IdUsuario;
-        private string _Proxima;
-        private string _Leyendo;
-        private string _Leido;
+        private string _IdProxima;
+        private string _IdLeyendo;
+        private string _IdLeido;
 
         public Biblioteca() {}
 
-        public Biblioteca(int IdBiblioteca, int IdUsuario, string Proxima, string Leyendo, string Leido){
+        public Biblioteca(int IdBiblioteca, int IdUsuario, string IdProxima, string IdLeyendo, string IdLeido){
             _IdBiblioteca = IdBiblioteca;
             _IdUsuario = IdUsuario;
-            _Proxima = Proxima;
-            _Leyendo = Leyendo;
-            _Leido = Leido;
+            _IdProxima = IdProxima;
+            _IdLeyendo = IdLeyendo;
+            _IdLeido = IdLeido;
         }
 
         public int IdBiblioteca{
@@ -27,17 +27,17 @@ namespace TP09.Models
             get {return _IdUsuario;}
             set {_IdUsuario = value;}
         }
-        public string Proxima{
-            get {return _Proxima;}
-            set {_Proxima = value;}
+        public string IdProxima{
+            get {return _IdProxima;}
+            set {_IdProxima = value;}
         }
-        public string Leyendo{
-            get {return _Leyendo;}
-            set {_Leyendo = value;}
+        public string IdLeyendo{
+            get {return _IdLeyendo;}
+            set {_IdLeyendo = value;}
         }
         public string Leido{
-            get {return _Leido;}
-            set {_Leido = value;}
+            get {return _IdLeido;}
+            set {_IdLeido = value;}
         }
     }
 }

@@ -16,9 +16,15 @@ public class HomeController : Controller
             ViewBag.ListadoLibros = BD.ListarLibros();
             return View();
         }
+        public IActionResult Perfil()
+        {
+            return View();
+        }
 
         public IActionResult VerDetalleLibro(int IdLibro)
         {
+            ViewBag.ElId = IdLibro;
+
             ViewBag.Libro = BD.VerInfoLibro(IdLibro);
             ViewBag.Personajes = BD.ListarPersonajes(IdLibro);
             return View("VerDetalleLibro");
@@ -30,11 +36,31 @@ public class HomeController : Controller
         }
         public IActionResult AgregarPersonaje(int IdLibro)
         {
+            ViewBag.ElId = IdLibro;
+            ViewBag.NombreLibro = BD.VerInfoLibro(IdLibro).Nombre;
             ViewBag.ListadoPersonaje = BD.VerInfoPersonaje(IdLibro);
             return View("AgregarPersonaje");
         }
+        public IActionResult CrearCuenta()
+        {
+            return View("IniciarSesion");
+        }
 
         [HttpPost]
+        public IActionResult GuardarCuenta(Usuario usu, IFormFile FotoDePerfil)
+        {
+            if(FotoDePerfil.Length > 0)
+            {
+                string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\img\" + FotoDePerfil.FileName;
+                using (var stream = System.IO.File.Create(wwwRootLocal))
+                {
+                    FotoDePerfil.CopyToAsync(stream);
+                }
+                usu.FotoDePerfil = FotoDePerfil.FileName;
+            }
+            BD.CrearUsuario(usu);
+            return View("IniciarSesion");
+        }
         public IActionResult GuardarPersonaje(Personaje Pers, IFormFile Foto)
         {
             if(Foto.Length > 0)

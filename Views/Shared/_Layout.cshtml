@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TP09</title>
+    <title>@ViewData["Title"] - biblioteca📚</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TP09.styles.css" asp-append-version="true" />
@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TP09</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class = "Logo" src = "/img/Logo.png" width = 50rem></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Perfil">Perfil</a>
                         </li>
                     </ul>
                 </div>
@@ -35,12 +35,50 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - TP09 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="responsiveSiteFooter border-top footer text-muted">
+        <div class="responsiveSiteFooter__contents gr-container-fluid">
+            <div class="gr-row">
+                <div class="gr-col gr-col-md-3 gr-col-lg-6">
+                    <div class="gr-row">
+                        <div class="col-6">
+                            <h5 class="responsiveSiteFooter__heading">Company</h5>
+                                <ul class="responsiveSiteFooter__linkList puo">
+                                    <li class="responsiveSiteFooter__linkListItem">
+                                        <a class="responsiveSiteFooter__link" href="/Home/Privacy">About us</a>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="col-6">
+                            <h5 class="responsiveSiteFooter__heading">Connect</h5>
+                            <div class="responsiveSiteFooter__socialLinkWrapper">
+                                <a class="responsiveSiteFooter__socialLink hjgjuf" href="https://www.facebook.com/">
+                                    <img alt="Facebook" src="https://s.gr-assets.com/assets/site_footer/footer_facebook-ea4ab848f8e86c5f5c98311bc9495a1b.svg">
+                                </a>
+                                <a class="responsiveSiteFooter__socialLink hjgjuf" href="https://twitter.com/">
+                                    <img alt="Twitter" src="https://s.gr-assets.com/assets/site_footer/footer_twitter-126b3ee80481a763f7fccb06ca03053c.svg">
+                                </a>
+                            </div>
+                            <div class="responsiveSiteFooter__socialLinkWrapper">
+                                <a class="responsiveSiteFooter__socialLink hjgjuf" href="https://www.instagram.com/">
+                                    <img alt="Instagram" src="https://s.gr-assets.com/assets/site_footer/footer_instagram-d59e3887020f12bcdb12e6c539579d85.svg">
+                                </a>
+                                <a class="responsiveSiteFooter__socialLink hjgjuf" href="https://www.linkedin.com/">
+                                    <img alt="LinkedIn" src="https://s.gr-assets.com/assets/site_footer/footer_linkedin-5b820f4703eff965672594ef4d10e33c.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            
+            <div>
+                <ul class="responsiveSiteFooter__linkList">
+                    <li class="responsiveSiteFooter__linkListItem">© 2022 tu Biblioteca, Inc.</li>
+                </ul>
+            </div>
+            </div>
         </div>
     </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

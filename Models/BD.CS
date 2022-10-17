@@ -10,10 +10,11 @@ namespace TP09.Models
 {
     public static class BD
     {
-        private static string _connectionString = @"Server=A-PHZ2-CIDI-044;DataBase=Qatar2022;Trusted_Connection=True;";
+        private static string _connectionString = @"Server=PC-CAMILA\SQLEXPRESS01;DataBase=Qatar2022;Trusted_Connection=True;";
         private static List<Personaje> _ListadoPersonaje = new List<Personaje>();
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
+        private static List<Usuario> _ListadoUsuario = new List<Usuario>();
 
         public static List<Personaje> AgregarPersonaje(Personaje Pers)
         {
@@ -26,10 +27,18 @@ namespace TP09.Models
         public static List<Libro> AgregarLibro(Libro Lib)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "INSERT INTO Libros(Nombre, Portada, Contraportada, Autor, CantPaginas, Descripción, TW, CantLibros) VALUES (@pNombre, @pPortada, @pContraportada, @pAutor, @pCantPaginas, @pDescripción, @pTW), @pCantLibros;";
-                _ListadoPersonaje = BD.Query<Personaje>(sql, new {pNombre = Lib.Nombre, pPortada=Lib.Portada, pContraportada=Lib.Contraportada, pAutor=Lib.Autor, pCantPaginas=Lib.CantPaginas, pDescripción=Lib.Descripción, pTW=Lib.TW, pCantLibros=Lib.CantLibros}).ToList();
+                string sql = "INSERT INTO Libros(Nombre, Portada, Contraportada, Autor, CantPaginas, Descripción, TW, CantLibros) VALUES (@pNombre, @pPortada, @pContraportada, @pAutor, @pCantPaginas, @pDescripción, @pTW, @pCantLibros);";
+                _ListadoLibros = BD.Query<Libro>(sql, new {pNombre = Lib.Nombre, pPortada=Lib.Portada, pContraportada=Lib.Contraportada, pAutor=Lib.Autor, pCantPaginas=Lib.CantPaginas, pDescripción=Lib.Descripción, pTW=Lib.TW, pCantLibros=Lib.CantLibros}).ToList();
             }
             return _ListadoLibros;
+        }
+        public static List<Usuario> CrearUsuario(Usuario usu)
+        {
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "INSERT INTO Usuario(Nombre, Contraseña, Activo, Mail, HoraDeCreación, PermisoDeEditor, FotoDePerfil) VALUES (@pNombre, @pContraseña, @pActivo, @pMail, @pHoraDeCreación, @pPermisoDeEditor, @pFotoDePerfil);";
+                _ListadoUsuario = BD.Query<Usuario>(sql, new {pNombre = usu.Nombre, pContraseña=usu.Contraseña, pActivo=1, pMail=usu.Mail, pHoraDeCreación=DateTime.Today, pPermisoDeEditor=0, pFotoDePerfil=usu.FotoDePerfil}).ToList();
+            }
+            return _ListadoUsuario;
         }
         public static int EliminarPersonaje(int IdPersonaje)
         {

@@ -14,10 +14,12 @@ namespace TP09.Models
         private string _Genero;
         private string _Categoria;
         private int _IdCalificacion;
+        private int _IdGuardar;
+        private bool _Guardar;
 
         public Libro() {}
 
-        public Libro(int IdLibro, string Nombre, string Portada,string Contraportada, string Autor, int CantPaginas, string Descripción, string TW, int CantLibros, string Genero, string Categoria, int IdCalificacion){
+        public Libro(int IdLibro, string Nombre, string Portada,string Contraportada, string Autor, int CantPaginas, string Descripción, string TW, int CantLibros, string Genero, string Categoria, int IdCalificacion, int IdGuardar, bool Guardar){
             _IdLibro = IdLibro;
             _Nombre = Nombre;
             _Portada = Portada;
@@ -30,6 +32,8 @@ namespace TP09.Models
             _Genero = Genero;
             _Categoria = Categoria;
             _IdCalificacion = IdCalificacion;
+            _IdGuardar = IdGuardar;
+            _Guardar = Guardar;
         }
 
         public int IdLibro{
@@ -79,6 +83,15 @@ namespace TP09.Models
         public int IdCalificacion{
             get {return _IdCalificacion;}
             set {_IdCalificacion = value;}
+        }
+        
+        public int IdGuardar{
+            get {return _IdGuardar;}
+            set {_IdGuardar = value;}
+        }
+        public bool Guardar{
+            get {return _Guardar;}
+            set {_Guardar = value;}
         }
 
     }
