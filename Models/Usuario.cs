@@ -10,10 +10,12 @@ namespace TP09.Models
         private DateTime _HoraDeCreación;
         private bool _PermisoDeEditor;
         private string _FotoDePerfil;
+        private string _Apellido;
+        private string _NombreDeUsuario;
 
         public Usuario() {}
 
-        public Usuario(int IdUsuario, string Nombre, string Contraseña,bool Activo, string Mail, DateTime HoraDeCreación, bool PermisoDeEditor, string FotoDePerfil){
+        public Usuario(int IdUsuario, string Nombre, string Contraseña,bool Activo, string Mail, DateTime HoraDeCreación, bool PermisoDeEditor, string FotoDePerfil, string Apellido, string NombreDeUsuario){
             _IdUsuario = IdUsuario;
             _Nombre = Nombre;
             _Contraseña = Contraseña;
@@ -22,6 +24,8 @@ namespace TP09.Models
             _HoraDeCreación = HoraDeCreación;
             _PermisoDeEditor = PermisoDeEditor;
             _FotoDePerfil = FotoDePerfil;
+            _Apellido = Apellido;
+            _NombreDeUsuario= NombreDeUsuario;
         }
 
         public int IdUsuario{
@@ -55,6 +59,14 @@ namespace TP09.Models
         public string FotoDePerfil{
             get {return _FotoDePerfil;}
             set {_FotoDePerfil = value;}
+        }
+        public string Apellido{
+            get {return _Apellido;}
+            set {_Apellido = value;}
+        }
+        public string NombreDeUsuario{
+            get {return _NombreDeUsuario;}
+            set {_NombreDeUsuario = value;}
         }
     }
 }

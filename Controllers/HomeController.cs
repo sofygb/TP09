@@ -45,9 +45,22 @@ public class HomeController : Controller
         {
             return View("IniciarSesion");
         }
+        public IActionResult ModificarUsuario()
+        {
+            return View("ModificarPerfil");
+        }
 
         [HttpPost]
-        public IActionResult GuardarCuenta(Usuario usu, IFormFile FotoDePerfil)
+        public IActionResult GuardarCuenta(Usuario usu)
+        {
+            BD.CrearUsuario(usu);
+            return RedirectToAction("Index");
+        }
+        public IActionResult CerrarSesión()
+        {
+            return RedirectToAction("Index");
+        }
+        public IActionResult GuardarCambiosUsuario(Usuario usu, IFormFile FotoDePerfil)
         {
             if(FotoDePerfil.Length > 0)
             {
@@ -58,8 +71,7 @@ public class HomeController : Controller
                 }
                 usu.FotoDePerfil = FotoDePerfil.FileName;
             }
-            BD.CrearUsuario(usu);
-            return View("IniciarSesion");
+            return View("ModificarPerfil");
         }
         public IActionResult GuardarPersonaje(Personaje Pers, IFormFile Foto)
         {
@@ -74,11 +86,11 @@ public class HomeController : Controller
             }
 
             BD.AgregarPersonaje(Pers);
-             ViewBag.Libro = BD.VerInfoLibro(Pers.IdLibro);
+            ViewBag.Libro = BD.VerInfoLibro(Pers.IdLibro);
             ViewBag.Personajes = BD.ListarPersonajes(Pers.IdLibro);
             return View("VerDetalleLibro");
         }
-
+        
         public IActionResult EliminarPersonaje(int IdPersonaje, int IdLibro)
         {
             BD.EliminarPersonaje(IdPersonaje);

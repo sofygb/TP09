@@ -15,6 +15,7 @@ namespace TP09.Models
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
         private static List<Usuario> _ListadoUsuario = new List<Usuario>();
+        private static bool haySesionAbierta = false;
 
         public static List<Personaje> AgregarPersonaje(Personaje Pers)
         {
@@ -35,10 +36,22 @@ namespace TP09.Models
         public static List<Usuario> CrearUsuario(Usuario usu)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "INSERT INTO Usuario(Nombre, Contraseña, Activo, Mail, HoraDeCreación, PermisoDeEditor, FotoDePerfil) VALUES (@pNombre, @pContraseña, @pActivo, @pMail, @pHoraDeCreación, @pPermisoDeEditor, @pFotoDePerfil);";
-                _ListadoUsuario = BD.Query<Usuario>(sql, new {pNombre = usu.Nombre, pContraseña=usu.Contraseña, pActivo=1, pMail=usu.Mail, pHoraDeCreación=DateTime.Today, pPermisoDeEditor=0, pFotoDePerfil=usu.FotoDePerfil}).ToList();
+                string sql = "INSERT INTO Usuario(Nombre, Apellido, NombreDeUsuario, Contraseña, Activo, Mail, HoraDeCreación, PermisoDeEditor, FotoDePerfil) VALUES (@pNombre, @pApellido, @pNombreDeUsuario, @pContraseña, @pActivo, @pMail, @pHoraDeCreación, @pPermisoDeEditor, @pFotoDePerfil);";
+                _ListadoUsuario = BD.Query<Usuario>(sql, new {pNombre = usu.Nombre, pApellido = usu.Apellido, pNombreDeUsuario = usu.NombreDeUsuario, pContraseña=usu.Contraseña, pActivo=1, pMail=usu.Mail, pHoraDeCreación=DateTime.Today, pPermisoDeEditor=0, pFotoDePerfil=0}).ToList();
             }
+            haySesionAbierta = true;
             return _ListadoUsuario;
+        }
+        public static bool HaySesion()
+        {
+            return haySesionAbierta;
+        }
+        public static string ModificarUsuario(Usuario usu)
+        {
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "UPDATE Usuario SET NombreDeUsurio =  @pNombreDeUsuario, FotoDePerfil = @pFotoDePerfil WHERE IdUsuario = @pIdUsurio);";
+            }
+            return "Se ha modificado con exito su perfil";
         }
         public static int EliminarPersonaje(int IdPersonaje)
         {
