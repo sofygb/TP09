@@ -11,6 +11,11 @@ public class HomeController : Controller
         {
             Enviroment = enviroment;
         }
+        public IActionResult ParaProbarCosas()
+        {
+            ViewBag.ListadoLibros = BD.ListarLibros();
+            return View("ParaProbarCosas");
+        }
         public IActionResult Index()
         {
             ViewBag.ListadoLibros = BD.ListarLibros();

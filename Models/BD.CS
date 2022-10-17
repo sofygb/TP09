@@ -46,12 +46,13 @@ namespace TP09.Models
         {
             return haySesionAbierta;
         }
-        public static string ModificarUsuario(Usuario usu)
+        public static void ModificarUsuario(Usuario usu)
         {
+            int nose;
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "UPDATE Usuario SET NombreDeUsurio =  @pNombreDeUsuario, FotoDePerfil = @pFotoDePerfil WHERE IdUsuario = @pIdUsurio);";
+                string sql = "UPDATE Usuario SET NombreDeUsurio =  @pNombreDeUsuario, FotoDePerfil = @pFotoDePerfil WHERE IdUsuario = @pIdUsuario);";
+                nose = BD.Execute(sql, new {pNombreDeUsuario = usu.NombreDeUsuario, pFotoDePerfil = usu.FotoDePerfil, pIdUsuario = usu.IdUsuario});
             }
-            return "Se ha modificado con exito su perfil";
         }
         public static int EliminarPersonaje(int IdPersonaje)
         {
@@ -73,7 +74,7 @@ namespace TP09.Models
         }
         public static Libro VerInfoLibro(int IdLibro)
         {
-            Libro MiLibro = null;
+            Libro MiLibro;
             using(SqlConnection BD = new SqlConnection(_connectionString)){
                 string sql = "SELECT * FROM Libros WHERE IdLibro = @libroselect";
                 MiLibro = BD.QueryFirstOrDefault<Libro>(sql, new { libroselect = IdLibro});
