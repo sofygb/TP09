@@ -46,6 +46,15 @@ namespace TP09.Models
         {
             return haySesionAbierta;
         }
+        public static Usuario VerPerfil(Usuario usu)
+        {
+            Usuario usua;
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT * FROM Usuario WHERE IdUsuario = @pIdUsuario";
+                usua = BD.QueryFirstOrDefault<Usuario>(sql, new {pIdUsuario = usu.IdUsuario});
+            }
+            return usua;
+        }
         public static void ModificarUsuario(Usuario usu)
         {
             int nose;
