@@ -9,18 +9,18 @@
                 <input type = "hidden" name = "IdLibro" value="@ViewBag.ElId">
             <br><br>
             <label for="Nombre"><b>Nombre del personaje:</b></label>
-            <input type="text" name="Nombre">
+            <input type="text" name="Nombre" required>
             <br><br>
             <label for="FechaNacimiento"><b>Fecha de nacimiento:</b></label>
-            <input type="date" name="FechaNacimiento">
+            <input type="date" name="FechaNacimiento" required>
             <br><br>
             <label for="Genero"><b>Genero:</b></label>
-            <input type="text" name="Genero">
+            <input type="text" name="Genero" required>
             <br><br>
             <label for="Nacionalidad"><b>Nacionalidad:</b></label>
-            <input type="text" name="Nacionalidad">
+            <input type="text" name="Nacionalidad" required>
             <br><br>
-            <label for="Estado"><b>Estado actual:</b><br />
+            <label for="Estado" required><b>Estado actual:</b><br />
                 <div style="margin-left: 2rem;">
                     <input type="radio" name="Estado" value="Vivo" id="Vivo"/>
                     <label for="Vivo">Vivo</label><br />
@@ -34,10 +34,10 @@
             </label> 
             <br><br>
             <label for="Foto"><b>Imagen/fanart:</b></label>
-            <input type="file" id="Foto" name="Foto">
+            <input type="file" id="Foto" name="Foto" required>
             <br><br>
             <label for="Descripcion"><b>Descripción:</b></label>
-            <input type="text" name="Descripcion">
+            <input type="text" name="Descripcion" required>
             <br><br>
             <button type="submit" class="btn btn-primary col-2 mb-2">Aceptar</button>
             </div>
