@@ -29,7 +29,6 @@ public class HomeController : Controller
         public IActionResult VerDetalleLibro(int IdLibro)
         {
             ViewBag.ElId = IdLibro;
-
             ViewBag.Libro = BD.VerInfoLibro(IdLibro);
             ViewBag.Personajes = BD.ListarPersonajes(IdLibro);
             return View("VerDetalleLibro");
@@ -78,6 +77,7 @@ public class HomeController : Controller
             }
             return View("ModificarPerfil");
         }
+        [HttpPost]
         public IActionResult GuardarPersonaje(Personaje Pers, IFormFile Foto)
         {
             if(Foto.Length > 0)
@@ -91,9 +91,7 @@ public class HomeController : Controller
             }
 
             BD.AgregarPersonaje(Pers);
-            ViewBag.Libro = BD.VerInfoLibro(Pers.IdLibro);
-            ViewBag.Personajes = BD.ListarPersonajes(Pers.IdLibro);
-            return View("VerDetalleLibro");
+            return RedirectToAction("VerDetalleLibro", new {IdLibro=Pers.IdLibro});
         }
         
         public IActionResult EliminarPersonaje(int IdPersonaje, int IdLibro)
@@ -120,4 +118,3 @@ public class HomeController : Controller
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 }
-
