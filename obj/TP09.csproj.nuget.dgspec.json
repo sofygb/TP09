@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Camila\\Desktop\\TP09\\TP09.csproj": {}
+    "C:\\Users\\47059737\\TP09\\TP09.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Camila\\Desktop\\TP09\\TP09.csproj": {
+    "C:\\Users\\47059737\\TP09\\TP09.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Camila\\Desktop\\TP09\\TP09.csproj",
+        "projectUniqueName": "C:\\Users\\47059737\\TP09\\TP09.csproj",
         "projectName": "TP09",
-        "projectPath": "C:\\Users\\Camila\\Desktop\\TP09\\TP09.csproj",
-        "packagesPath": "C:\\Users\\Camila\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Camila\\Desktop\\TP09\\obj\\",
+        "projectPath": "C:\\Users\\47059737\\TP09\\TP09.csproj",
+        "packagesPath": "C:\\Users\\47059737\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\47059737\\TP09\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Camila\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\47059737\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
