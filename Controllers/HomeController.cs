@@ -119,11 +119,11 @@ public class HomeController : Controller
             VerDetalleLibro(IdLibro);
             return View("VerDetalleLibro");
         }
-
+        
         public IActionResult EliminarLibro(int IdLibro)
         {
             BD.EliminarLibro(IdLibro);
-            return View("Index");
+            return RedirectToAction("Index");
         }
 
         public IActionResult Privacy()

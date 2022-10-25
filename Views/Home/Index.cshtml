@@ -52,10 +52,12 @@
                             </div>
 
                             <div class="button">
-                            <button>
-                                <a href='@Url.Action("VerDetalleLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})'class="Basta">Más info</a>
-                            </button>
-                            <button class="hireMe">Eliminar</button>
+                              <button>
+                                  <a href='@Url.Action("VerDetalleLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})'class="Basta">Más info</a>
+                              </button>
+                              <button>
+                                  <a href='@Url.Action("EliminarLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})'class="Basta">Eliminar</a>
+                              </button>
                             </div>
                         </div>
                     </div>
