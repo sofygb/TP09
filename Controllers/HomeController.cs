@@ -19,6 +19,7 @@ public class HomeController : Controller
         public IActionResult Index()
         {
             ViewBag.ListadoLibros = BD.ListarLibros();
+            ViewBag.Sesion = BD.HaySesion();
             return View();
         }
         public IActionResult Perfil()
@@ -96,9 +97,14 @@ public class HomeController : Controller
         
         public IActionResult EliminarPersonaje(int IdPersonaje, int IdLibro)
         {
-            BD.EliminarPersonaje(IdPersonaje);
-            VerDetalleLibro(IdLibro);
+            bool si =  BD.HaySesion();
+            if(si = true)
+            {
+                BD.EliminarPersonaje(IdPersonaje);
+                VerDetalleLibro(IdLibro);
+            }
             return View("VerDetalleLibro");
+            
         }
         
         public IActionResult EliminarLibro(int IdLibro)

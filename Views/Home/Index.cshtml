@@ -35,7 +35,7 @@
                     <div class="swiper-slide card">
                         <div class="card-content">
                             <div>
-                            <img class="imagenes" src="/img/@BuscarLibro.Portada" alt="">
+                              <img class="imagenes" src="/img/@BuscarLibro.Portada" alt="">
                             </div>
 
                             <div class="name-profession">
@@ -44,31 +44,60 @@
                             </div>
 
                             <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
                             </div>
-
+                            
                             <div class="button">
                               <button>
                                   <a href='@Url.Action("VerDetalleLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})'class="Basta">Más info</a>
                               </button>
-                              <button>
-                                  <a href='@Url.Action("EliminarLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})'class="Basta">Eliminar</a>
-                              </button>
+                              
+                              @{if(ViewBag.Sesion == true)
+                                {
+                                  <a href='@Url.Action("EliminarLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})' class="btn btn-primary button">Eliminar</a>
+                                }
+                                else{
+                                  <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary hireMe" data-toggle="modal" data-target="#exampleModalCenter">
+                                      Eliminar
+                                    </button>
+
+                                }
+                              }
                             </div>
-                        </div>
-                    </div>
-                    
-                
+                      </div>
+                  </div>
             }
         }
       </div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">¡Error!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Usted no puede eliminar, ni modificar ningun objeto debido a que no abrio su sesión. Por favor registrate o create una cuenta!!
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-primary button" href='@Url.Action("CrearCuenta", "Home")'>Iniciar Sesión</a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- Swiper JS -->
