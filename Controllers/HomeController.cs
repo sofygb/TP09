@@ -24,7 +24,7 @@ public class HomeController : Controller
             ViewBag.Sesion = BD.HaySesion();
             return View();
         }
-        public IActionResult Perfil(Usuario usu)
+        public IActionResult Perfil(int usu)
         {
             ViewBag.ElId = usu;
             ViewBag.NombreUsuario = BD.VerPerfil(usu);

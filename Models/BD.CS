@@ -45,6 +45,10 @@ namespace TP09.Models
             UsuarioLogueado = usu;
             return _ListadoUsuario;
         }
+        public static string IddelUsuriario()
+        {
+            return UsuarioLogueado.FotoDePerfil;
+        }
         public static void InicioSesion(Usuario usu)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){
@@ -56,12 +60,12 @@ namespace TP09.Models
         {
             return haySesionAbierta;
         }
-        public static Usuario VerPerfil(Usuario usu)
+        public static Usuario VerPerfil(int IdUsuario)
         {
             Usuario usua;
             using(SqlConnection BD = new SqlConnection(_connectionString)){
                 string sql = "SELECT * FROM Usuario WHERE IdUsuario = @pIdUsuario";
-                usua = BD.QueryFirstOrDefault<Usuario>(sql, new {pIdUsuario = usu.IdUsuario});
+                usua = BD.QueryFirstOrDefault<Usuario>(sql, new {pIdUsuario = IdUsuario});
             }
             return usua;
         }
