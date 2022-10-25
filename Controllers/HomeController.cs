@@ -27,6 +27,7 @@ public class HomeController : Controller
         public IActionResult Perfil(int usu)
         {
             ViewBag.ElId = usu;
+            ViewBag.UsuarioLogueado.NombreDeUsurio = "jikdj";
             ViewBag.NombreUsuario = BD.VerPerfil(usu);
             return View("Perfil");
         }
@@ -77,7 +78,6 @@ public class HomeController : Controller
             {
                 return RedirectToAction("Index");
             }
-            
         }
 
         public IActionResult CerrarSesión()
@@ -123,7 +123,6 @@ public class HomeController : Controller
                 VerDetalleLibro(IdLibro);
             }
             return View("VerDetalleLibro");
-            
         }
         
         public IActionResult EliminarLibro(int IdLibro)
