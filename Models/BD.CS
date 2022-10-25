@@ -1,3 +1,5 @@
+using System.Data;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -10,11 +12,12 @@ namespace TP09.Models
 {
     public static class BD
     {
-        private static string _connectionString = @"Server=A-PHZ2-CIDI-042;DataBase=Qatar2022;Trusted_Connection=True;";
+        private static string _connectionString = @"Server=A-PHZ2-CIDI-043;DataBase=Qatar2022;Trusted_Connection=True;";
         private static List<Personaje> _ListadoPersonaje = new List<Personaje>();
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
         private static List<Usuario> _ListadoUsuario = new List<Usuario>();
+        public static Usuario UsuarioLogueado = null;
         private static bool haySesionAbierta = false;
 
         public static List<Personaje> AgregarPersonaje(Personaje Pers)
@@ -41,6 +44,13 @@ namespace TP09.Models
             }
             haySesionAbierta = true;
             return _ListadoUsuario;
+        }
+        public static void InicioSesion(Usuario usu)
+        {
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT * FROM Usuario WHERE Mail = @pMail AND Contraseña= @pContraseña";
+                UsuarioLogueado = BD.QueryFirstOrDefault<Usuario>(sql, new {pMail = usu.Mail, pContraseña = usu.Contraseña});
+            }
         }
         public static bool HaySesion()
         {

@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System.ComponentModel;
+using System.IO.Compression;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TP09.Models;
 
@@ -21,9 +23,11 @@ public class HomeController : Controller
             ViewBag.ListadoLibros = BD.ListarLibros();
             return View();
         }
-        public IActionResult Perfil()
+        public IActionResult Perfil(Usuario usu)
         {
-            return View();
+            ViewBag.ElId = usu;
+            ViewBag.NombreUsuario = BD.VerPerfil(usu);
+            return View("Perfil");
         }
 
         public IActionResult VerDetalleLibro(int IdLibro)
@@ -60,6 +64,21 @@ public class HomeController : Controller
             BD.CrearUsuario(usu);
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        public IActionResult InicioSesion(Usuario usu)
+        {
+            BD.InicioSesion(usu);
+            if (usu == null)
+            {
+                return View("IniciarSesion");
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+            
+        }
+
         public IActionResult CerrarSesión()
         {
             return RedirectToAction("Index");
