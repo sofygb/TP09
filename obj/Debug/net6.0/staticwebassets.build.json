@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "W6lMf8Y3c59cSzNS2lJK30zuVq+bfyEAR9HU0SCDt24=",
-=======
-  "Hash": "MuSt1fP40vEhuLV7N35DuolK5t49aZ3oxquDoLjdGQE=",
->>>>>>> d29333242c4de7f1a77f2cab03c82f5b9588e80d
+  "Hash": "4wvvQwAaj1mTi9Y+igIlhjxW4fEAM/VqGGHZn/ZlR/I=",
   "Source": "TP09",
   "BasePath": "_content/TP09",
   "Mode": "Default",
@@ -497,13 +493,10 @@
       "OriginalItemSpec": "wwwroot\\img\\probar.jpg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\right-arrow.png",
-=======
-      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\PRUEBA.jpg",
+      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\PRUEBA.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/PRUEBA.jpg",
       "AssetKind": "All",
@@ -517,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\img\\PRUEBA.jpg"
     },
     {
-      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\PRUEBA2.jpg",
+      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\PRUEBA2.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/PRUEBA2.jpg",
       "AssetKind": "All",
@@ -534,8 +527,7 @@
       "OriginalItemSpec": "wwwroot\\img\\PRUEBA2.jpg"
     },
     {
-      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\right-arrow.png",
->>>>>>> d29333242c4de7f1a77f2cab03c82f5b9588e80d
+      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\right-arrow.png",
       "SourceId": "TP09",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
