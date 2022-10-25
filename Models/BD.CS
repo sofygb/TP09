@@ -42,7 +42,7 @@ namespace TP09.Models
                 string sql = "INSERT INTO Usuario(Nombre, Apellido, NombreDeUsuario, Contraseña, Activo, Mail, HoraDeCreación, PermisoDeEditor, FotoDePerfil) VALUES (@pNombre, @pApellido, @pNombreDeUsuario, @pContraseña, @pActivo, @pMail, @pHoraDeCreación, @pPermisoDeEditor, @pFotoDePerfil);";
                 _ListadoUsuario = BD.Query<Usuario>(sql, new {pNombre = usu.Nombre, pApellido = usu.Apellido, pNombreDeUsuario = usu.NombreDeUsuario, pContraseña=usu.Contraseña, pActivo=1, pMail=usu.Mail, pHoraDeCreación=DateTime.Today, pPermisoDeEditor=0, pFotoDePerfil=0}).ToList();
             }
-            haySesionAbierta = true;
+            UsuarioLogueado = usu;
             return _ListadoUsuario;
         }
         public static void InicioSesion(Usuario usu)

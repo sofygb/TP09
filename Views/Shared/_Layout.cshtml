@@ -23,9 +23,6 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Perfil">Perfil</a>
-                        </li>
-                        <li class="nav-item">
                             @{
                                 if (BD.UsuarioLogueado==null)
                                 {
@@ -34,7 +31,7 @@
                                 else
                                 {
                                     <li class="nav-item">
-                                        Bienvenido @BD.UsuarioLogueado.Nombre
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Perfil">Perfil</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ModificarUsuario">Modificar Pefil</a>
