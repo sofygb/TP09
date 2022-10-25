@@ -27,7 +27,6 @@ bld/
 [Oo]bj/
 [Ll]og/
 
-
 # Visual Studio 2015 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
@@ -37,7 +36,7 @@ bld/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
- # NUNIT
+# NUNIT
 *.VisualState.xml
 TestResult.xml
 
