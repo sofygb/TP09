@@ -27,7 +27,6 @@ public class HomeController : Controller
         public IActionResult Perfil(int usu)
         {
             ViewBag.ElId = usu;
-            ViewBag.UsuarioLogueado.NombreDeUsurio = "jikdj";
             ViewBag.NombreUsuario = BD.VerPerfil(usu);
             return View("Perfil");
         }

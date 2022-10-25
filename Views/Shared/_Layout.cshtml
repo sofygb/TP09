@@ -31,9 +31,22 @@
                                 else
                                 {
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        @BD.IddelUsuriario()
-                                        </a>
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @{
+                                            if(BD.MANDARindoUSUARIO() == "NULL")
+                                            {
+                                                <img src="/img/iconochico.png">
+                                            }
+                                            else{
+                                                <img src="/img/@BD.MANDARindoUSUARIO()">
+                                                
+                                            } 
+                                        }      
+                                    </a>
+                                }
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            @BD.MANDARindoUSUARIO()
+                                            </a>
 
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Perfil">Perfil</a>

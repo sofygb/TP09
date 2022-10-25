@@ -12,13 +12,14 @@ namespace TP09.Models
 {
     public static class BD
     {
-        private static string _connectionString = @"Server=A-PHZ2-CIDI-042;DataBase=Qatar2022;Trusted_Connection=True;";
+        private static string _connectionString = @"Server=A-PHZ2-CIDI-043;DataBase=Qatar2022;Trusted_Connection=True;";
         private static List<Personaje> _ListadoPersonaje = new List<Personaje>();
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
         private static List<Usuario> _ListadoUsuario = new List<Usuario>();
         public static Usuario UsuarioLogueado = null;
         private static bool haySesionAbierta = false;
+        private static bool hayFotoDePerfil = false;
 
         public static List<Personaje> AgregarPersonaje(Personaje Pers)
         {
@@ -45,10 +46,27 @@ namespace TP09.Models
             UsuarioLogueado = usu;
             return _ListadoUsuario;
         }
-        public static string IddelUsuriario()
+        //no sabemos si esto sirve pero se intento
+        public static string MANDARindoUSUARIO()
         {
             return UsuarioLogueado.FotoDePerfil;
         }
+        public static bool HayFotoDePerfil(int IdUsuario)
+        {
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT FotoDePerfil FROM Usuario WHERE IdUsuario = @pIdUsuario";
+                UsuarioLogueado = BD.QueryFirstOrDefault<Usuario>(sql, new {pIdUsuario = IdUsuario});
+            }
+            if(UsuarioLogueado.FotoDePerfil != "null")
+            {
+                hayFotoDePerfil = true;
+            }
+            else{
+                hayFotoDePerfil = false;
+            }
+            return hayFotoDePerfil;
+        }
+        //lo demás si sirve
         public static void InicioSesion(Usuario usu)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){
