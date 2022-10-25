@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "Hash": "W6lMf8Y3c59cSzNS2lJK30zuVq+bfyEAR9HU0SCDt24=",
-=======
-  "Hash": "MuSt1fP40vEhuLV7N35DuolK5t49aZ3oxquDoLjdGQE=",
->>>>>>> d29333242c4de7f1a77f2cab03c82f5b9588e80d
+  "Hash": "fd+jokwtX0MlKqZliNXGf4IKZBhwIUNeLJzhNjvMTFY=",
   "Source": "TP09",
   "BasePath": "_content/TP09",
   "Mode": "Default",
@@ -14,17 +10,17 @@
     {
       "Name": "TP09\\wwwroot",
       "Source": "TP09",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\obj\\Debug\\net6.0\\scopedcss\\bundle\\TP09.styles.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\obj\\Debug\\net6.0\\scopedcss\\bundle\\TP09.styles.css",
       "SourceId": "TP09",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/TP09",
       "RelativePath": "TP09.styles.css",
       "AssetKind": "All",
@@ -35,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\47059737\\TP09\\obj\\Debug\\net6.0\\scopedcss\\bundle\\TP09.styles.css"
+      "OriginalItemSpec": "C:\\Users\\47344372\\TP09\\obj\\Debug\\net6.0\\scopedcss\\bundle\\TP09.styles.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TP09.bundle.scp.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TP09.bundle.scp.css",
       "SourceId": "TP09",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/TP09",
       "RelativePath": "TP09.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\47059737\\TP09\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TP09.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\47344372\\TP09\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TP09.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\css\\site.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -72,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\favicon.ico",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -89,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\01.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\01.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/01.jpg",
       "AssetKind": "All",
@@ -106,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\img\\01.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\02.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\02.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/02.jpg",
       "AssetKind": "All",
@@ -123,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\img\\02.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\03.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\03.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/03.jpg",
       "AssetKind": "All",
@@ -140,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\img\\03.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\04.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\04.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/04.jpg",
       "AssetKind": "All",
@@ -157,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\img\\04.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\05.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\05.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/05.jpg",
       "AssetKind": "All",
@@ -174,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\img\\05.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\06.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\06.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/06.jpg",
       "AssetKind": "All",
@@ -191,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\img\\06.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\add.png",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\add.png",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/add.png",
       "AssetKind": "All",
@@ -208,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\img\\add.png"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\basura.png",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\basura.png",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/basura.png",
       "AssetKind": "All",
@@ -225,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\img\\basura.png"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\Cami.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\Cami.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/Cami.jpg",
       "AssetKind": "All",
@@ -242,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Cami.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\Captura.PNG",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\Captura.PNG",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/Captura.PNG",
       "AssetKind": "All",
@@ -259,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Captura.PNG"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\CarmillaFoto.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\CarmillaFoto.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/CarmillaFoto.jpg",
       "AssetKind": "All",
@@ -276,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\img\\CarmillaFoto.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\carrie.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\carrie.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/carrie.jpg",
       "AssetKind": "All",
@@ -293,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\img\\carrie.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\carrie2.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\carrie2.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/carrie2.jpg",
       "AssetKind": "All",
@@ -310,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\img\\carrie2.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\DEH.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\DEH.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/DEH.jpg",
       "AssetKind": "All",
@@ -327,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\img\\DEH.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\DEH2.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\DEH2.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/DEH2.jpg",
       "AssetKind": "All",
@@ -344,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\img\\DEH2.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\dibujos_para_colorear_de_hello_kitty_17064_600_square.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\dibujos_para_colorear_de_hello_kitty_17064_600_square.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/dibujos_para_colorear_de_hello_kitty_17064_600_square.jpg",
       "AssetKind": "All",
@@ -361,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\img\\dibujos_para_colorear_de_hello_kitty_17064_600_square.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\iconface.png",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\iconface.png",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/iconface.png",
       "AssetKind": "All",
@@ -378,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\img\\iconface.png"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\iconinsta.png",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\iconinsta.png",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/iconinsta.png",
       "AssetKind": "All",
@@ -395,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\img\\iconinsta.png"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\icontwitter.png",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\icontwitter.png",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/icontwitter.png",
       "AssetKind": "All",
@@ -412,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\img\\icontwitter.png"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\left-arrow.png",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\left-arrow.png",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/left-arrow.png",
       "AssetKind": "All",
@@ -429,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\img\\left-arrow.png"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\Logo.png",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\Logo.png",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/Logo.png",
       "AssetKind": "All",
@@ -446,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Logo.png"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\PJ.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\PJ.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/PJ.jpg",
       "AssetKind": "All",
@@ -463,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\img\\PJ.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\PJ2.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\PJ2.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/PJ2.jpg",
       "AssetKind": "All",
@@ -480,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\img\\PJ2.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\probar.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\probar.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/probar.jpg",
       "AssetKind": "All",
@@ -497,9 +493,6 @@
       "OriginalItemSpec": "wwwroot\\img\\probar.jpg"
     },
     {
-<<<<<<< HEAD
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\right-arrow.png",
-=======
       "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\PRUEBA.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
@@ -535,10 +528,9 @@
     },
     {
       "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\right-arrow.png",
->>>>>>> d29333242c4de7f1a77f2cab03c82f5b9588e80d
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/right-arrow.png",
       "AssetKind": "All",
@@ -552,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\img\\right-arrow.png"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\rr.PNG",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\rr.PNG",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/rr.PNG",
       "AssetKind": "All",
@@ -569,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\img\\rr.PNG"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\SoC.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\SoC.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/SoC.jpg",
       "AssetKind": "All",
@@ -586,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\img\\SoC.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\SoC2.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\SoC2.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/SoC2.jpg",
       "AssetKind": "All",
@@ -603,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\img\\SoC2.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\Sofi.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\Sofi.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/Sofi.jpg",
       "AssetKind": "All",
@@ -620,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Sofi.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\TSH.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\TSH.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/TSH.jpg",
       "AssetKind": "All",
@@ -637,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\img\\TSH.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\TSH2.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\TSH2.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/TSH2.jpg",
       "AssetKind": "All",
@@ -654,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\img\\TSH2.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\TSHoEH.jpg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\TSHoEH.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/TSHoEH.jpg",
       "AssetKind": "All",
@@ -671,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\img\\TSHoEH.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\TSHoEH2.jpeg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\TSHoEH2.jpeg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/TSHoEH2.jpeg",
       "AssetKind": "All",
@@ -688,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\img\\TSHoEH2.jpeg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\WhatsApp Image 2022-07-12 at 11.12.07 AM.jpeg",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\WhatsApp Image 2022-07-12 at 11.12.07 AM.jpeg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "img/WhatsApp Image 2022-07-12 at 11.12.07 AM.jpeg",
       "AssetKind": "All",
@@ -705,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\img\\WhatsApp Image 2022-07-12 at 11.12.07 AM.jpeg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\js\\site.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -722,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -739,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -756,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -773,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -790,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -807,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -824,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -841,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -858,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -875,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -892,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -909,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -926,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -943,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -960,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -977,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -994,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1011,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1028,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1045,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1062,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1079,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1096,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1113,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1130,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1147,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1164,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1181,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1198,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1215,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1232,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1249,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1266,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1283,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1300,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1317,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1334,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1351,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1368,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1385,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1402,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1419,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1436,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1453,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1470,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1487,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1504,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1521,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1538,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1555,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1572,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1589,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1606,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1623,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1640,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1657,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1674,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "TP09",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
       "BasePath": "_content/TP09",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
