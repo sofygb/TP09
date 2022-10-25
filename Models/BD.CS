@@ -1,3 +1,4 @@
+using System.Data;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -75,9 +76,9 @@ namespace TP09.Models
         public static int EliminarLibro(int IdLibro)
         {
             int RegistrosEliminados = 0;
-            string sql = "DELETE FROM Libros WHERE IdLibro = @bLibro";
+            string sp = "EliminarUnLibro";
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                RegistrosEliminados = BD.Execute(sql, new {bLibro = IdLibro });
+                RegistrosEliminados = BD.Execute(sp, new {libroselect = IdLibro },  commandType: CommandType.StoredProcedure);
             }
             return RegistrosEliminados;
         }

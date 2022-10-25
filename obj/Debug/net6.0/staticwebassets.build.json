@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r0rlW7B1EUqvnBc22UfASWSrBh9CSGKmDw+k+kajnNI=",
+  "Hash": "MuSt1fP40vEhuLV7N35DuolK5t49aZ3oxquDoLjdGQE=",
   "Source": "TP09",
   "BasePath": "_content/TP09",
   "Mode": "Default",
@@ -474,6 +474,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\probar.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\PRUEBA.jpg",
+      "SourceId": "TP09",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
+      "BasePath": "_content/TP09",
+      "RelativePath": "img/PRUEBA.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\PRUEBA.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\PRUEBA2.jpg",
+      "SourceId": "TP09",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
+      "BasePath": "_content/TP09",
+      "RelativePath": "img/PRUEBA2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\PRUEBA2.jpg"
     },
     {
       "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\right-arrow.png",
