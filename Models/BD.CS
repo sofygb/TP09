@@ -44,10 +44,11 @@ namespace TP09.Models
                 _ListadoUsuario = BD.Query<Usuario>(sql, new {pNombre = usu.Nombre, pApellido = usu.Apellido, pNombreDeUsuario = usu.NombreDeUsuario, pContraseña=usu.Contraseña, pActivo=1, pMail=usu.Mail, pHoraDeCreación=DateTime.Today, pPermisoDeEditor=0, pFotoDePerfil=0}).ToList();
             }
             UsuarioLogueado = usu;
+            haySesionAbierta = true;
             return _ListadoUsuario;
         }
         //no sabemos si esto sirve pero se intento
-        public static string MANDARindoUSUARIO()
+        public static string NombraImagen()
         {
             return UsuarioLogueado.FotoDePerfil;
         }
@@ -73,6 +74,7 @@ namespace TP09.Models
                 string sql = "SELECT * FROM Usuario WHERE Mail = @pMail AND Contraseña= @pContraseña";
                 UsuarioLogueado = BD.QueryFirstOrDefault<Usuario>(sql, new {pMail = usu.Mail, pContraseña = usu.Contraseña});
             }
+            haySesionAbierta = true;
         }
         public static bool HaySesion()
         {
@@ -104,12 +106,12 @@ namespace TP09.Models
             }
             return RegistrosEliminados;
         }
-        public static int EliminarLibro(int IdLibro)
+       public static int EliminarLibro(int pIdLibro)
         {
             int RegistrosEliminados = 0;
             string sp = "EliminarUnLibro";
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                RegistrosEliminados = BD.Execute(sp, new {libroselect = IdLibro },  commandType: CommandType.StoredProcedure);
+                RegistrosEliminados = BD.Execute(sp, new {IdLibro = pIdLibro},  commandType: CommandType.StoredProcedure);
             }
             return RegistrosEliminados;
         }

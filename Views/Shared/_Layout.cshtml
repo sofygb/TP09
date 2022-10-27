@@ -22,7 +22,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item dropdown">
                                 @if (BD.UsuarioLogueado==null)
                                 {
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CrearCuenta">Iniciar Sesión</a>
@@ -30,13 +30,13 @@
                                 else
                                 {
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        @if(BD.MANDARindoUSUARIO() == null)
+                                        @if(BD.NombraImagen() == null)
                                         {
                                             <img src="/img/iconochico.png">
                                         }
                                         else
                                         {
-                                            <img src="/img/@BD.MANDARindoUSUARIO()">
+                                            <img src="/img/@BD.NombraImagen()">
                                         } 
                                     </a>
                                 }      

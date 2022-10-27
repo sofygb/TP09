@@ -55,7 +55,9 @@
                               
                               @{if(ViewBag.Sesion == true)
                                 {
-                                  <a href='@Url.Action("EliminarLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})' class="btn btn-primary button">Eliminar</a>
+                                  <button>
+                                    <a href='@Url.Action("EliminarLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})' class="Basta hireMe">Eliminar</a>
+                                  </button>
                                 }
                                 else{
                                   <!-- Button trigger modal -->
