@@ -2,10 +2,30 @@
     ViewData["Title"] = "Perfil";
 }
     <div class="text padding2">
-
-        <img class="imagenes" src="" alt="">
-        <h6 class="display-4"><b> @BD.UsuarioLogueado.Nombre</b></h6>
+        <br>
+        @if (BD.UsuarioLogueado==null)
+        {
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CrearCuenta">Iniciar Sesión</a>
+        } 
+        else
+        {
+            <a class="imagenes" href="#" id="imgdeperfil">
+            
+            @if(BD.NombraImagen() == null)
+            {
+                <img src="/img/iconochico.png">
+            }
+            else
+            {
+             <img src="/img/@BD.NombraImagen()">
+            } 
+            </a>
+        }      
+        <br><h6 class="display-4"><b> Hola @BD.UsuarioLogueado.Nombre</b></h6>
         
-        <p>edit profile</p>
+        <p>info Perfil</p>
+
+        <a class="nav-link text-dark " href="/Home/ModificarUsuario">edit profile</a>
+        
     </div>
   <section class="container-fluid">
