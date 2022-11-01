@@ -17,15 +17,13 @@
             }
             else
             {
-             <img src="/img/@BD.NombraImagen()" style="width:50px;">
+             <img src="/img/@BD.NombraImagen()" style="width: 120px;" class="round">
             } 
             </a>
         }      
-        <br><h6 class="display-4"><b> Hola @BD.UsuarioLogueado.Nombre</b></h6>
+        <br><p class="display-4"><b> @BD.UsuarioLogueado.NombreDeUsuario</b></p>
         
-        <p>info Perfil</p>
-
-        <a class="nav-link text-dark " href="/Home/ModificarUsuario">edit profile</a>
+        <a class="btn btn-secondary" href="/Home/ModificarUsuario" role="button">edit profile</a>
         
     </div>
   <section class="container-fluid">
