@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JmUrzr+KRVRPGNLTOnBCVIc2utOta8iSLE546FCUY8I=",
+  "Hash": "oMKUbnfqsADd/yuNedwdRVpxDs6jfpHS0zZlUdnewWY=",
   "Source": "TP09",
   "BasePath": "_content/TP09",
   "Mode": "Default",
@@ -355,6 +355,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\dibujos_para_colorear_de_hello_kitty_17064_600_square.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\fotoHola2.jpg",
+      "SourceId": "TP09",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "BasePath": "_content/TP09",
+      "RelativePath": "img/fotoHola2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\fotoHola2.jpg"
     },
     {
       "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\iconface.png",
