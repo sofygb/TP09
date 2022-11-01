@@ -40,13 +40,13 @@
                                             <img src="/img/@BD.NombraImagen()" style="width:50px;">
                                         } 
                                     </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Perfil">Perfil</a>
+                                        <a class="nav-link text-dark" href='@Url.Action("ModificarUsuario","Home",new {Id=BD.UsuarioLogueado.IdUsuario})'>Modificar Pefil</a>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CerrarSesión">Cerrar Sesión</a>
+                                    </div>
                                 }      
     
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Perfil">Perfil</a>
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ModificarUsuario">Modificar Pefil</a>
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CerrarSesión">Cerrar Sesión</a>
-                                </div>
                             </li>
                         </ul>
                     </div>

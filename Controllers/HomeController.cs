@@ -54,7 +54,7 @@ public class HomeController : Controller
         {
             return View("IniciarSesion");
         }
-        public IActionResult ModificarUsuario()
+        public IActionResult ModificarUsuario(int Id)
         {
             return View("ModificarPerfil");
         }
@@ -83,19 +83,19 @@ public class HomeController : Controller
         {
             return RedirectToAction("Index");
         }
-        public IActionResult GuardarCambiosUsuario(Usuario usu, IFormFile FotoDePerfil)
-        {
-            if(FotoDePerfil.Length > 0)
-            {
-                string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\img\" + FotoDePerfil.FileName;
-                using (var stream = System.IO.File.Create(wwwRootLocal))
-                {
-                    FotoDePerfil.CopyToAsync(stream);
-                }
-                usu.FotoDePerfil = FotoDePerfil.FileName;
-            }
-            return View("ModificarPerfil");
-        }
+        public IActionResult GuardarCambiosUsuario(Usuario usu, IFormFile FotoDePerfil) 
+        { 
+            if(FotoDePerfil.Length > 0) 
+            { 
+                string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\img\" + FotoDePerfil.FileName; 
+                using (var stream = System.IO.File.Create(wwwRootLocal)) 
+                { 
+                    FotoDePerfil.CopyToAsync(stream);  
+                }  
+                usu.FotoDePerfil = FotoDePerfil.FileName;  
+            } 
+            return View("ModificarPerfil"); 
+        } 
         [HttpPost]
         public IActionResult GuardarPersonaje(Personaje Pers, IFormFile Foto)
         {
