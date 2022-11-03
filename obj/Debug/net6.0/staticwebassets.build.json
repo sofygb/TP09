@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SQeNFxLRGa/d5DNaz6yMqnHcCmomdV9eyIMG3kkOAus=",
+  "Hash": "sQIpl39tEQ59soSxTo6MFUvKk7oaUl/M41pyi6PdmaE=",
   "Source": "TP09",
   "BasePath": "_content/TP09",
   "Mode": "Default",
@@ -323,23 +323,6 @@
       "OriginalItemSpec": "wwwroot\\img\\DEH2.jpg"
     },
     {
-      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\dibujos_para_colorear_de_hello_kitty_17064_600_square.jpg",
-      "SourceId": "TP09",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
-      "BasePath": "_content/TP09",
-      "RelativePath": "img/dibujos_para_colorear_de_hello_kitty_17064_600_square.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\dibujos_para_colorear_de_hello_kitty_17064_600_square.jpg"
-    },
-    {
       "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\fotoHola2.jpg",
       "SourceId": "TP09",
       "SourceType": "Discovered",
@@ -440,6 +423,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\icontwitter.png"
+    },
+    {
+      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\kitty.jpg",
+      "SourceId": "TP09",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "BasePath": "_content/TP09",
+      "RelativePath": "img/kitty.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\kitty.jpg"
     },
     {
       "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\left-arrow.png",

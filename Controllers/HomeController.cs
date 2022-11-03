@@ -81,20 +81,23 @@ public class HomeController : Controller
 
         public IActionResult CerrarSesión()
         {
+            BD.UsuarioLogueado = null;
             return RedirectToAction("Index");
         }
         public IActionResult GuardarCambiosUsuario(Usuario usu, IFormFile FotoDePerfil) 
         { 
             if(FotoDePerfil.Length > 0) 
             { 
-                string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\img\" + FotoDePerfil.FileName; 
+                string wwwRootLocal = this.Enviroment.ContentRootPath + @"\wwwroot\img\" + FotoDePerfil.FileName; 
                 using (var stream = System.IO.File.Create(wwwRootLocal)) 
                 { 
                     FotoDePerfil.CopyToAsync(stream);  
                 }  
                 usu.FotoDePerfil = FotoDePerfil.FileName;  
             } 
-            return View("ModificarPerfil"); 
+            BD.ModificarUsuario(usu);
+            BD.UsuarioLogueado = usu;
+            return RedirectToAction("Index");
         } 
         [HttpPost]
         public IActionResult GuardarPersonaje(Personaje Pers, IFormFile Foto)

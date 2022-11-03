@@ -5,6 +5,12 @@
 <div class="text padding2">
     <br><br>
     <form method= "post" action = '@Url.Action("GuardarCambiosUsuario","Home")' enctype="multipart/form-data">
+        <input type="hidden" name="IdUsuario" value="@BD.UsuarioLogueado.IdUsuario">
+        <div class="form-group">
+            <label for="" class="d-block mb-1">Foto de Perfil</label>
+            <input type="file" name="FotoDePerfil" id="FotoDePerfil" tabindex="1" class="form-control" placeholder="Foto De Perfil" value="@BD.UsuarioLogueado.FotoDePerfil">
+        </div>
+        
         <div class="form-group">
             <label for="" class="d-block mb-1">Nombre</label>
             <input type="text" name="Nombre" id="Nombre" tabindex="1" class="form-control" placeholder="Usuario" value="@BD.UsuarioLogueado.Nombre">
@@ -15,10 +21,10 @@
             <input type="text" name="Apellido" id="Apellido" tabindex="2" class="form-control" placeholder="Apellido" value="@BD.UsuarioLogueado.Apellido">
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="" class="d-block mb-1">Nombre de Usuario</label>
             <input type="text" name="NombreDeUsuario" id="NombreDeUsuario" tabindex="3" class="form-control" placeholder="Nombre De Usuario" value="@BD.UsuarioLogueado.NombreDeUsuario">
-        </div>
+        </div> -->
 
         <div class="form-group">
             <label for="" class="d-block mb-1">Correo electronico</label>
@@ -31,6 +37,7 @@
         </div>
         
         <button type="submit" class="btn btn-primary col-2 mb-2">Guardar Cambios</button>
+        <input type="button" value="Cancel" onclick="history.back()" class="btn btn-outline-secondary col-2 mb-2"/>
 
     </form>
   
