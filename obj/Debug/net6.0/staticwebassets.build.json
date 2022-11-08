@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sQIpl39tEQ59soSxTo6MFUvKk7oaUl/M41pyi6PdmaE=",
+  "Hash": "JeZjJaC3fB1WDLmSZKnURcWvGEJVOQ8FH5s0C09uSuc=",
   "Source": "TP09",
   "BasePath": "_content/TP09",
   "Mode": "Default",
@@ -321,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\DEH2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\descarga.jfif",
+      "SourceId": "TP09",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47059737\\TP09\\wwwroot\\",
+      "BasePath": "_content/TP09",
+      "RelativePath": "img/descarga.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\descarga.jfif"
     },
     {
       "Identity": "C:\\Users\\47059737\\TP09\\wwwroot\\img\\fotoHola2.jpg",

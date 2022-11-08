@@ -50,6 +50,12 @@ public class HomeController : Controller
             ViewBag.ListadoPersonaje = BD.VerInfoPersonaje(IdLibro);
             return View("AgregarPersonaje");
         }
+
+        public IActionResult AgregarLibro()
+        {
+            return View("AgregarLibro");
+        }
+        
         public IActionResult CrearCuenta()
         {
             return View("IniciarSesion");
@@ -98,7 +104,24 @@ public class HomeController : Controller
             BD.ModificarUsuario(usu);
             BD.UsuarioLogueado = usu;
             return RedirectToAction("Index");
-        } 
+        }
+        [HttpPost]
+        public IActionResult GuardarLibro(Libro Pers, IFormFile Portada, IFormFile Contraportada)
+        {
+            if(Portada.Length > 0 && Contraportada.Length > 0)
+            {
+                string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\img\" + Portada.FileName + Contraportada.FileName;
+                using (var stream = System.IO.File.Create(wwwRootLocal))
+                {
+                    Portada.CopyToAsync(stream);
+                    Contraportada.CopyToAsync(stream);
+                }
+                Pers.Portada = Portada.FileName;
+                Pers.Contraportada = Contraportada.FileName;
+            }
+            BD.AgregarLibro(Pers);
+            return RedirectToAction("Index");
+        }
         [HttpPost]
         public IActionResult GuardarPersonaje(Personaje Pers, IFormFile Foto)
         {

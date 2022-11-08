@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Agregar Libro";
+}
+<div class="text-center">
+        <h3 class="display-4"><b>Agregar Libro</b></h3>
+    </div>
+<div class="padding container-fluid">
+    <h1 class="display-4 text-center">@ViewBag.NombreLibro</h1>
+    <form method= "post" action = '@Url.Action("GuardarLibro","Home")' enctype="multipart/form-data">
+        <div class="Agregar">
+            <div style="margin-left: 2rem; margin-right: 2rem; margin-bottom: 2rem;">
+                <input type = "hidden" name = "IdLibro" value="@ViewBag.ElId">
+            <br><br>
+            <label for="Nombre"><b>Nombre del libro:</b></label>
+            <input type="text" name="Nombre" required>
+            <br><br>
+            <label for="Autor"><b>Nombre del Autor:</b></label>
+            <input type="text" name="Autor" required>
+            <br><br>
+            <label for="CantPaginas"><b>Cantidad de páginas:</b></label>
+            <input type="text" name="CantPaginas" required>
+            <br><br>
+            <label for="Descripción"><b>Descripción:</b></label>
+            <input type="text" name="Descripción" required>
+            <br><br>
+            <label for="TW"><b>Trigger Warning:</b></label>
+            <input type="text" name="TW" required>
+            <br><br>
+            <label for="CantLibros"><b>Cantidad de Libros:</b></label>
+            <input type="text" name="CantLibros">
+            <br><br>
+            <label for="Genero"><b>Genero:</b></label>
+            <input type="text" name="Genero" required>
+            <br><br>
+            <label for="Categoria"><b>Categoria:</b></label>
+            <input type="text" name="Categoria" required>
+            <br><br>
+            <label for="Portada"><b>Portada:</b></label>
+            <input type="file" id="Portada" name="Portada" required>
+            <br><br>
+            <label for="Contraportada"><b>Contraportada:</b></label>
+            <input type="file" id="Contraportada" name="Contraportada" required><br><br>
+            <button type="submit" class="btn btn-primary col-2 mb-2">Aceptar</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -35,9 +35,9 @@
                               <img class="imagenes" src="/img/@BuscarLibro.Portada" alt="">
                             </div>
 
-                            <div class="name-profession">
-                            <span class="name">@BuscarLibro.Nombre</span>
-                            <span class="profession">@BuscarLibro.Autor</span>
+                            <div class="name-profession" style="min-height:85px;">
+                              <span class="name">@BuscarLibro.Nombre</span>
+                              <span class="profession">@BuscarLibro.Autor</span>
                             </div>
 
                             <div class="rating">
@@ -60,17 +60,30 @@
                                   </button>
                                 }
                                 else{
-                                  <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary hireMe" data-toggle="modal" data-target="#exampleModalCenter">
                                       Eliminar
                                     </button>
-
                                 }
                               }
                             </div>
                       </div>
-                  </div>
-            }
+                      
+                  </div>            
+            }   
+        }
+      </div>
+
+      <div class="AgregarLibro ">
+        @{if(ViewBag.Sesion == true){
+          <button>
+            <a href='@Url.Action("AgregarLibro", "Home")' class="Basta hireMe pos diseñodeagregar">Agregar Libro  +</a>
+          </button>
+          }
+          else{
+            <button type="button" class="btn btn-primary hireMe pos diseñodeagregar" data-toggle="modal" data-target="#exampleModalCenter">
+              Agregar Libro  +
+            </button>
+          }
         }
       </div>
     </div>
