@@ -29,7 +29,8 @@
                                 } 
                                 else
                                 {
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="mover">
+                                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         @if(BD.NombraImagen() == null)
                                         {
                                             <img src="/img/iconochico.png">
@@ -39,11 +40,12 @@
                                             //<img src="/img/@BD.NombraImagen()" style="width:50px;" class="rounded-circle">
                                             <img src="/img/@BD.NombraImagen()" style="width:50px;">
                                         } 
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Perfil">Perfil</a>
-                                        <a class="nav-link text-dark" href='@Url.Action("ModificarUsuario","Home",new {Id=BD.UsuarioLogueado.IdUsuario})'>Modificar Pefil</a>
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CerrarSesión">Cerrar Sesión</a>
+                                        </a>
+                                        <div class="dropdown-menu mover" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Perfil">Perfil</a>
+                                            <a class="nav-link text-dark" href='@Url.Action("ModificarUsuario","Home",new {Id=BD.UsuarioLogueado.IdUsuario})'>Modificar Pefil</a>
+                                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CerrarSesión">Cerrar Sesión</a>
+                                        </div>
                                     </div>
                                 }      
     

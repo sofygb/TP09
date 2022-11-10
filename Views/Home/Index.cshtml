@@ -76,7 +76,7 @@
       <div class="AgregarLibro ">
         @{if(ViewBag.Sesion == true){
           <button>
-            <a href='@Url.Action("AgregarLibro", "Home")' class="Basta hireMe pos diseñodeagregar">Agregar Libro  +</a>
+            <a href='@Url.Action("AgregarLibro", "Home")' class="Basta hireMe pos diseñodeagregar col-2 mb-2">Agregar Libro  +</a>
           </button>
           }
           else{
@@ -100,7 +100,7 @@
             </button>
           </div>
           <div class="modal-body">
-            Usted no puede eliminar, ni modificar ningun objeto debido a que no abrio su sesión. Por favor registrate o create una cuenta!!
+            Usted no puede eliminar, ni modificar ningun objeto debido a que no inicio sesión. Por favor registrate o create una cuenta!!
           </div>
           <div class="modal-footer">
             <a class="btn btn-primary button" href='@Url.Action("CrearCuenta", "Home")'>Iniciar Sesión</a>

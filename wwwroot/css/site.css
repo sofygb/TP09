@@ -4,7 +4,7 @@ html {
 
 .Agregar{
   border-style:groove;
-  background-color: rgba(162, 144, 144, 0.54);
+  background-color: rgba(177, 177, 177, 0.54);
   margin: 1rem;
 }
 
@@ -14,6 +14,64 @@ html {
 
 .AgregarLibro{
   position:relative;
+}
+
+.diseñodeeliminar{
+  background: #535353;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(97, 97, 97);
+  outline: none;
+  outline-color: initial;
+  outline-style: none;
+  outline-width: initial;
+  border: none;
+  border-top-color: initial;
+  border-top-style: none;
+  border-top-width: initial;
+  border-right-color: initial;
+  border-right-style: none;
+  border-right-width: initial;
+  border-bottom-color: initial;
+  border-bottom-style: none;
+  border-bottom-width: initial;
+  border-left-color: initial;
+  border-left-style: none;
+  border-left-width: initial;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  color: #fff;
+  padding: 8px 22px;
+  padding-top: 8px;
+  padding-right: 22px;
+  padding-bottom: 8px;
+  padding-left: 22px;
+  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  cursor: pointer;
+}
+
+.mover{
+  float: right;
 }
 
 .pos{
