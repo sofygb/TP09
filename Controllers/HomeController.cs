@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Runtime.InteropServices.ComTypes;
+using System.ComponentModel;
 using System.IO.Compression;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
@@ -161,20 +162,10 @@ public class HomeController : Controller
         }
 
         [HttpPost]
-         public IActionResult GuardarComentario(Personaje Pers, IFormFile Foto)
+        public IActionResult GuardarComentario(calificacion cal)
         {
-            if(Foto.Length > 0)
-            {
-                string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\img\" + Foto.FileName;
-                using (var stream = System.IO.File.Create(wwwRootLocal))
-                {
-                    Foto.CopyToAsync(stream);
-                }
-                Pers.Foto = Foto.FileName;
-            }
-
-            BD.AgregarPersonaje(Pers);
-            return RedirectToAction("VerDetalleLibro", new {IdLibro=Pers.IdLibro});
+           BD.calificacionLibroAjax(cal);
+           return View("VerDetalleLibro");
         }
 
         public IActionResult Privacy()
