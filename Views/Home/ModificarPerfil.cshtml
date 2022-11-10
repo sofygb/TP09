@@ -5,40 +5,37 @@
 <div class="text padding2">
     <br><br>
     <form method= "post" action = '@Url.Action("GuardarCambiosUsuario","Home")' enctype="multipart/form-data">
-        <input type="hidden" name="IdUsuario" value="@BD.UsuarioLogueado.IdUsuario">
-        <div class="form-group">
-            <label for="" class="d-block mb-1">Foto de Perfil</label>
-            <input type="file" name="FotoDePerfil" id="FotoDePerfil" tabindex="1" class="form-control" placeholder="Foto De Perfil" value="@BD.UsuarioLogueado.FotoDePerfil">
-        </div>
-        
-        <div class="form-group">
-            <label for="" class="d-block mb-1">Nombre</label>
-            <input type="text" name="Nombre" id="Nombre" tabindex="1" class="form-control" placeholder="Usuario" value="@BD.UsuarioLogueado.Nombre">
-        </div>
+        <div class="Agregar">
+            <div style="margin-left: 2rem; margin-right: 2rem; margin-bottom: 2rem; margin-top: 2rem">
+                <input type="hidden" name="IdUsuario" value="@BD.UsuarioLogueado.IdUsuario">
 
-        <div class="form-group">
-            <label for="" class="d-block mb-1">Apellido</label>
-            <input type="text" name="Apellido" id="Apellido" tabindex="2" class="form-control" placeholder="Apellido" value="@BD.UsuarioLogueado.Apellido">
+                <label for="" class="d-block mb-1"><b>Foto de Perfil</b></label>
+                <input type="file" name="FotoDePerfil" id="FotoDePerfil" tabindex="1" placeholder="Foto De Perfil" value="@BD.UsuarioLogueado.FotoDePerfil">
+                <br><br>
+
+                <label for="" class="d-block mb-1"><b>Nombre</b></label>
+                <input type="text" name="Nombre" id="Nombre" tabindex="1" placeholder="Usuario" value="@BD.UsuarioLogueado.Nombre">
+                <br><br>
+
+                <label for="" class="d-block mb-1"><b>Apellido</b></label>
+                <input type="text" name="Apellido" id="Apellido" tabindex="2" placeholder="Apellido" value="@BD.UsuarioLogueado.Apellido">
+                <br><br>
+                <!-- <div class="form-group">
+                    <label for="" class="d-block mb-1">Nombre de Usuario</label>
+                    <input type="text" name="NombreDeUsuario" id="NombreDeUsuario" tabindex="3" class="form-control" placeholder="Nombre De Usuario" value="@BD.UsuarioLogueado.NombreDeUsuario">
+                </div> -->
+
+                <label for="" class="d-block mb-1"><b>Correo electronico</b></label>
+                <input type="email" name="Mail" id="Mail" tabindex="4" placeholder="Correo electronico" value="@BD.UsuarioLogueado.Mail">
+                <br><br>
+
+                <label for="" class="d-block mb-1"><b>Contraseña</b></label>
+                <input type="password" name="Contraseña" id="Contraseña" tabindex="5" placeholder="Contraseña">
+                <br><br>
+            </div>
         </div>
-
-        <!-- <div class="form-group">
-            <label for="" class="d-block mb-1">Nombre de Usuario</label>
-            <input type="text" name="NombreDeUsuario" id="NombreDeUsuario" tabindex="3" class="form-control" placeholder="Nombre De Usuario" value="@BD.UsuarioLogueado.NombreDeUsuario">
-        </div> -->
-
-        <div class="form-group">
-            <label for="" class="d-block mb-1">Correo electronico</label>
-            <input type="email" name="Mail" id="Mail" tabindex="4" class="form-control" placeholder="Correo electronico" value="@BD.UsuarioLogueado.Mail">
-        </div>
-
-        <div class="form-group">
-            <label for="" class="d-block mb-1">Contraseña</label>
-            <input type="password" name="Contraseña" id="Contraseña" tabindex="5" class="form-control" placeholder="Contraseña">
-        </div>
-        
-        <button type="submit" class="btn btn-primary col-2 mb-2">Guardar Cambios</button>
-        <input type="button" value="Cancel" onclick="history.back()" class="btn btn-outline-secondary col-2 mb-2"/>
-
+        <button type="submit" class="Basta hireMe pos diseñodeagregar col-2 mb-2">Guardar Cambios</button> <br><br>
+        <input type="button" value="Cancel" onclick="history.back()" class="Basta hireMe pos diseñodeeliminar col-2 mb-2"/>
     </form>
   
 </div>
