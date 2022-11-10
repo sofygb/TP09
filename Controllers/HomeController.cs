@@ -55,6 +55,10 @@ public class HomeController : Controller
         {
             return View("AgregarLibro");
         }
+        public IActionResult AgregarComentario()
+        {
+            return View("Comentarios");
+        }
         
         public IActionResult CrearCuenta()
         {
@@ -154,6 +158,23 @@ public class HomeController : Controller
         {
             BD.EliminarLibro(IdLibro);
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+         public IActionResult GuardarComentario(Personaje Pers, IFormFile Foto)
+        {
+            if(Foto.Length > 0)
+            {
+                string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\img\" + Foto.FileName;
+                using (var stream = System.IO.File.Create(wwwRootLocal))
+                {
+                    Foto.CopyToAsync(stream);
+                }
+                Pers.Foto = Foto.FileName;
+            }
+
+            BD.AgregarPersonaje(Pers);
+            return RedirectToAction("VerDetalleLibro", new {IdLibro=Pers.IdLibro});
         }
 
         public IActionResult Privacy()

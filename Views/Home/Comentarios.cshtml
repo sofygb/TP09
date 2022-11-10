@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Comentarios";
+}
+<div class="padding container-fluid">
+    <h1 class="display-4 text-center">@ViewBag.NombreLibro</h1>
+    <form method= "post" action = '@Url.Action("GuardarComentario","Home")' enctype="multipart/form-data">
+        <div class="Agregar">
+            <div style="margin-left: 2rem; margin-right: 2rem; margin-bottom: 2rem;">
+                <input type = "hidden" name = "IdLibro" value="@ViewBag.ElId">
+            <br><br>
+            <label for="Descripcion"><b>Descripción:</b></label>
+            <input type="textarea" name="Comentario" required>
+            <br><br>
+            <button type="submit" class="btn btn-primary col-2 mb-2">Aceptar</button>
+            </div>
+        </div>
+    </form>
+</div>
