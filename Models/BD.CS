@@ -154,7 +154,7 @@ namespace TP09.Models
         public static List<calificacion> calificacionLibroAjax(calificacion cal)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "Insert into calificaciones(Comentarios, Estrellas) values (@pComantarios, @plikes)";
+                string sql = "INSERT INTO calificaciones(Comentarios, Estrellas) values (@pComantarios, @plikes)";
                 _ListadoCalificacion = BD.Query<calificacion>(sql, new {pComentarios = cal.Comentarios, plikes = cal.Estrellas}).ToList();
             }
             return _ListadoCalificacion;

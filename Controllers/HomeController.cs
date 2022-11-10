@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Runtime.InteropServices.ComTypes;
+using System.ComponentModel;
 using System.IO.Compression;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
@@ -54,6 +55,10 @@ public class HomeController : Controller
         public IActionResult AgregarLibro()
         {
             return View("AgregarLibro");
+        }
+        public IActionResult AgregarComentario()
+        {
+            return View("Comentarios");
         }
         
         public IActionResult CrearCuenta()
@@ -154,6 +159,13 @@ public class HomeController : Controller
         {
             BD.EliminarLibro(IdLibro);
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult GuardarComentario(calificacion cal)
+        {
+           BD.calificacionLibroAjax(cal);
+           return View("VerDetalleLibro");
         }
 
         public IActionResult Privacy()
