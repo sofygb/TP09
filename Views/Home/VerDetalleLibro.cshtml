@@ -39,7 +39,7 @@
         <p><b>Sinopsis: </b><br> @ViewBag.Libro.Descripción</p>
         <p><b>Personajes:</b><br></p>
 
-        <div class="row centrarElementos">
+        <div class="row centrarElementos" style="text-align: center">
                 @{
                     foreach (Personaje Pers in ViewBag.Personajes)
                     {
@@ -65,21 +65,18 @@
                         </div>
                     }
                 }
-            <div class="col-md-4 cardy">
-                <div class="BorderCard">
-                        <a href='@Url.Action("AgregarPersonaje", "Home", new{IdLibro = ViewBag.ElId})' alt="...">
-                            <img src="/img/add.png" class="card-img-top" width="0.1rem">
-                        </a>
-                    </div>
-                    <!-- <div class="card" style="width: 18rem;">
-                        <img src="/img/add.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <br>
-                            <br>
-                            <a href='Url.Action("AgregarPersonaje", "Home")' class="btn btn-primary">Agregar personaje</a>
-                        </div>
-                    </div> -->
-            </div>
+        </div>
+        <div style="text-align: right">
+            <br>
+            @{if(ViewBag.Sesion == true){
+            <a href='@Url.Action("AgregarPersonaje", "Home", new{IdLibro = ViewBag.ElId})' class="Basta hireMe diseñodeagregar">Agregar personaje  +</a>
+            }
+            else{
+                <button type="button" class="btn btn-primary hireMe pos diseñodeagregar col-2 mb-2" data-toggle="modal" data-target="#exampleModalCenter">
+                Agregar personaje  +
+                </button>
+            }
+            }
         </div>
     </div>
 <br>
@@ -87,5 +84,23 @@
 <br>
 <br>
 <br>
-
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">¡Error!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Usted no puede eliminar, ni modificar ningun objeto debido a que no inicio sesión. Por favor registrate o create una cuenta!!
+          </div>
+          <div class="modal-footer">
+            <a href='@Url.Action("CrearCuenta", "Home")' class="btn btn-primary hireMe pos diseñodeagregar">Iniciar Sesión</a>
+            <button type="button" class="btn btn-primary hireMe pos diseñodeeliminar" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 

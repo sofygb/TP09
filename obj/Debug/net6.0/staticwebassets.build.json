@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VKL4+YRr1y7HS7eWeuaTOWoUWyM4I3zwV9YAgnCTWCM=",
+  "Hash": "nK+fdFI7N1h3FCK/ktx7sXcGEGUKeSw2Ng+WOUwPn64=",
   "Source": "TP09",
   "BasePath": "_content/TP09",
   "Mode": "Default",
@@ -661,6 +661,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Sofi.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\tree-736885__480.jpg",
+      "SourceId": "TP09",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
+      "BasePath": "_content/TP09",
+      "RelativePath": "img/tree-736885__480.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\tree-736885__480.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\tree-736885__480.jpgtree-736885__480.jpg",
+      "SourceId": "TP09",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
+      "BasePath": "_content/TP09",
+      "RelativePath": "img/tree-736885__480.jpgtree-736885__480.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\tree-736885__480.jpgtree-736885__480.jpg"
     },
     {
       "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\TSH.jpg",
