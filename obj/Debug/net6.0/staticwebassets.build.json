@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nK+fdFI7N1h3FCK/ktx7sXcGEGUKeSw2Ng+WOUwPn64=",
+  "Hash": "qK1zvAvDiKS803GjooWN2e6iXR1hSTNYGKONCZuihK0=",
   "Source": "TP09",
   "BasePath": "_content/TP09",
   "Mode": "Default",
@@ -423,6 +423,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\iconogrande.png"
+    },
+    {
+      "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\iconoparaverperfil.png",
+      "SourceId": "TP09",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47344372\\TP09\\wwwroot\\",
+      "BasePath": "_content/TP09",
+      "RelativePath": "img/iconoparaverperfil.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\iconoparaverperfil.png"
     },
     {
       "Identity": "C:\\Users\\47344372\\TP09\\wwwroot\\img\\icontwitter.png",

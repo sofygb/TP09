@@ -37,11 +37,13 @@ public class HomeController : Controller
             ViewBag.ElId = IdLibro;
             ViewBag.Libro = BD.VerInfoLibro(IdLibro);
             ViewBag.Personajes = BD.ListarPersonajes(IdLibro);
+            ViewBag.Sesion = BD.HaySesion();
             return View("VerDetalleLibro");
         }
         public IActionResult VerDetallePersonaje(int IdPersonaje)
         { 
             ViewBag.Personajes = BD.VerInfoPersonaje(IdPersonaje);
+            ViewBag.Sesion = BD.HaySesion();
             return View("VerDetallePersonaje");
         }
         public IActionResult AgregarPersonaje(int IdLibro)
@@ -92,7 +94,7 @@ public class HomeController : Controller
 
         public IActionResult CerrarSesión()
         {
-            BD.UsuarioLogueado = null;
+            BD.CerrarSesion();
             return RedirectToAction("Index");
         }
         public IActionResult GuardarCambiosUsuario(Usuario usu, IFormFile FotoDePerfil) 
@@ -146,6 +148,7 @@ public class HomeController : Controller
         
         public IActionResult EliminarPersonaje(int IdPersonaje, int IdLibro)
         {
+            ViewBag.Sesion = BD.HaySesion();
             bool si =  BD.HaySesion();
             if(si = true)
             {
@@ -157,6 +160,7 @@ public class HomeController : Controller
         
         public IActionResult EliminarLibro(int IdLibro)
         {
+            ViewBag.Sesion = BD.HaySesion();
             BD.EliminarLibro(IdLibro);
             return RedirectToAction("Index");
         }
@@ -164,6 +168,7 @@ public class HomeController : Controller
         [HttpPost]
         public IActionResult GuardarComentario(calificacion cal)
         {
+           ViewBag.Sesion = BD.HaySesion();
            BD.calificacionLibroAjax(cal);
            return View("VerDetalleLibro");
         }

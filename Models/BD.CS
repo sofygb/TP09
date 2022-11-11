@@ -12,7 +12,7 @@ namespace TP09.Models
 {
     public static class BD
     {
-        private static string _connectionString = @"Server=A-PHZ2-CIDI-052;DataBase=Biblioteca;Trusted_Connection=True;";
+        private static string _connectionString = @"Server=A-PHZ2-LUM-03;DataBase=Qatar2022;Trusted_Connection=True;";
         private static List<Personaje> _ListadoPersonaje = new List<Personaje>();
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
@@ -40,14 +40,13 @@ namespace TP09.Models
         public static List<Usuario> CrearUsuario(Usuario usu)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "INSERT INTO Usuario(Nombre, Apellido, NombreDeUsuario, Contraseña, Activo, Mail, HoraDeCreación, PermisoDeEditor, FotoDePerfil) VALUES (@pNombre, @pApellido, @pNombreDeUsuario, @pContraseña, @pActivo, @pMail, @pHoraDeCreación, @pPermisoDeEditor, NULL);";
-                _ListadoUsuario = BD.Query<Usuario>(sql, new {pNombre = usu.Nombre, pApellido = usu.Apellido, pNombreDeUsuario = usu.NombreDeUsuario, pContraseña=usu.Contraseña, pActivo=1, pMail=usu.Mail, pHoraDeCreación=DateTime.Today, pPermisoDeEditor=0, pFotoDePerfil=0}).ToList();
+                string sql = "INSERT INTO Usuario(Nombre, Apellido, NombreDeUsuario, Contraseña, Activo, Mail, FechaDeCumplaños, PermisoDeEditor, FotoDePerfil) VALUES (@pNombre, @pApellido, @pNombreDeUsuario, @pContraseña, @pActivo, @pMail, @pFechaDeCumplaños, @pPermisoDeEditor, NULL);";
+                _ListadoUsuario = BD.Query<Usuario>(sql, new {pNombre = usu.Nombre, pApellido = usu.Apellido, pNombreDeUsuario = usu.NombreDeUsuario, pContraseña=usu.Contraseña, pActivo=1, pMail=usu.Mail, pFechaDeCumplaños=usu.FechaDeCumplaños, pPermisoDeEditor=0, pFotoDePerfil=0}).ToList();
             }
             UsuarioLogueado = usu;
             haySesionAbierta = true;
             return _ListadoUsuario;
         }
-        //no sabemos si esto sirve pero se intento
         public static string NombraImagen()
         {
             return UsuarioLogueado.FotoDePerfil;
@@ -67,7 +66,6 @@ namespace TP09.Models
             }
             return hayFotoDePerfil;
         }
-        //lo demás si sirve
         public static void InicioSesion(Usuario usu)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){
@@ -158,6 +156,11 @@ namespace TP09.Models
                 _ListadoCalificacion = BD.Query<calificacion>(sql, new {pComentarios = cal.Comentarios, plikes = cal.Estrellas}).ToList();
             }
             return _ListadoCalificacion;
+        }
+        public static void CerrarSesion()
+        {
+            haySesionAbierta = false;
+            UsuarioLogueado = null;
         }
     }
 }

@@ -53,9 +53,18 @@
                                         </div>
                                         <div class="col-md"></div>
                                         <div class="col-md-2 derecha" style="justify-content: flex-end;">
-                                            <a href='@Url.Action("EliminarPersonaje", "Home", new {IdPersonaje = Pers.IdPersonaje, IdLibro = Pers.IdLibro})' alt="Eliminar personaje">
-                                                <img src="/img/basura.png" class="card-img-top">
-                                            </a>
+                                            @{if(ViewBag.Sesion == true)
+                                            {
+                                                <a href='@Url.Action("EliminarPersonaje", "Home", new {IdPersonaje = Pers.IdPersonaje, IdLibro = Pers.IdLibro})' class="" alt="Eliminar personaje">
+                                                    <img src="/img/basura.png" class="card-img-top">
+                                                </a>
+
+                                            }
+                                            else{
+                                                <img src="/img/basura.png" class="card-img-top" data-toggle="modal" data-target="#exampleModalCenter">
+                                            }
+                                        }
+                                            
                                         </div>
                                     </div>
                                     <br>

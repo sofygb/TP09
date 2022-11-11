@@ -229,18 +229,18 @@ html {
   border-bottom-left-radius: 0.25rem rem;
 }
 
-.borde {
+.borde{
   border-style: hidden;
-  background-color: rgba(162, 144, 144, 0.54);
+  background-color: rgba(190, 190, 190, 0.54);
 }
 
-.texto {
+.texto{
   margin-left: 5%;
   margin-right: 5%;
   text-align: justify;
 }
 
-#autor {
+#autor{
   font-size: 3rem;
 }
 
