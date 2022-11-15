@@ -12,7 +12,7 @@ namespace TP09.Models
 {
     public static class BD
     {
-        private static string _connectionString = @"Server=A-PHZ2-CIDI-007;DataBase=Qatar2022;Trusted_Connection=True;";
+        private static string _connectionString = @"Server=A-PHZ2-CIDI-008;DataBase=Qatar2022;Trusted_Connection=True;";
         private static List<Personaje> _ListadoPersonaje = new List<Personaje>();
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
@@ -72,7 +72,7 @@ namespace TP09.Models
                 string sql = "SELECT * FROM Usuario WHERE Mail = @pMail AND Contraseña= @pContraseña";
                 UsuarioLogueado = BD.QueryFirstOrDefault<Usuario>(sql, new {pMail = usu.Mail, pContraseña = usu.Contraseña});
             }
-            haySesionAbierta = true;
+           
         }
         public static bool HaySesion()
         {
