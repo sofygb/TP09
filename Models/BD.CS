@@ -12,7 +12,7 @@ namespace TP09.Models
 {
     public static class BD
     {
-        private static string _connectionString = @"Server=A-PHZ2-LUM-03;DataBase=Qatar2022;Trusted_Connection=True;";
+        private static string _connectionString = @"Server=A-PHZ2-CIDI-007;DataBase=Qatar2022;Trusted_Connection=True;";
         private static List<Personaje> _ListadoPersonaje = new List<Personaje>();
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
@@ -32,8 +32,8 @@ namespace TP09.Models
         public static List<Libro> AgregarLibro(Libro Lib)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "INSERT INTO Libros(Nombre, Portada, Contraportada, Autor, CantPaginas, Descripción, TW, CantLibros) VALUES (@pNombre, @pPortada, @pContraportada, @pAutor, @pCantPaginas, @pDescripción, @pTW, @pCantLibros);";
-                _ListadoLibros = BD.Query<Libro>(sql, new {pNombre = Lib.Nombre, pPortada=Lib.Portada, pContraportada=Lib.Contraportada, pAutor=Lib.Autor, pCantPaginas=Lib.CantPaginas, pDescripción=Lib.Descripción, pTW=Lib.TW, pCantLibros=Lib.CantLibros}).ToList();
+                string sql = "INSERT INTO Libros(Nombre, Portada, Contraportada, Autor, CantPaginas, Descripción, TW, CantLibros, Generos, Categoria, GeneroPrincipal) VALUES (@pNombre, @pPortada, @pContraportada, @pAutor, @pCantPaginas, @pDescripción, @pTW, @pCantLibros,  @pGeneros, @pCategoria, @pGeneroPrincipal);";
+                _ListadoLibros = BD.Query<Libro>(sql, new {pNombre = Lib.Nombre, pPortada=Lib.Portada, pContraportada=Lib.Contraportada, pAutor=Lib.Autor, pCantPaginas=Lib.CantPaginas, pDescripción=Lib.Descripción, pTW=Lib.TW, pCantLibros=Lib.CantLibros, pGeneros=Lib.Generos, pCategoria=Lib.Categoria, pGeneroPrincipal=Lib.GeneroPrincipal}).ToList();
             }
             return _ListadoLibros;
         }

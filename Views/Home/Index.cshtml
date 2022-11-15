@@ -21,7 +21,7 @@
 </head>
 <body class="padding">
     <div class="text-center padding2">
-        <h1 class="display-4 paddingParaTitulos"><b>Tu biblioteca online</b></h1>
+        <h1 class="display-4 diseñodeltituloprincipal">Tu biblioteca online</h1>
     </div>
   <section class="container-fluid">
     
@@ -29,6 +29,8 @@
         <div class="swiper-wrapper content">
             @{
                 foreach(Libro BuscarLibro in ViewBag.ListadoLibros){
+                  if(BuscarLibro.GeneroPrincipal == "Fantasia")
+                  {
                     <div class="swiper-slide card">
                         <div class="card-content">
                             <div>
@@ -68,7 +70,51 @@
                             </div>
                       </div>
                       
-                  </div>            
+                  </div>
+                  }
+                  @if(BuscarLibro.GeneroPrincipal == "Terror")
+                  {
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div>
+                              <img class="imagenes" src="/img/@BuscarLibro.Portada" alt="">
+                            </div>
+
+                            <div class="name-profession" style="min-height:85px;">
+                              <span class="name">@BuscarLibro.Nombre</span>
+                              <span class="profession">@BuscarLibro.Autor</span>
+                            </div>
+
+                            <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+                            
+                            <div class="button">
+                              <button>
+                                  <a href='@Url.Action("VerDetalleLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})'class="Basta">Más info</a>
+                              </button>
+                              
+                              @{if(ViewBag.Sesion == true)
+                                {
+                                  <button>
+                                    <a href='@Url.Action("EliminarLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})' class="Basta hireMe">Eliminar</a>
+                                  </button>
+                                }
+                                else{
+                                    <button type="button" class="btn btn-primary hireMe" data-toggle="modal" data-target="#exampleModalCenter">
+                                      Eliminar
+                                    </button>
+                                }
+                              }
+                            </div>
+                      </div>
+                      
+                  </div>
+                  }             
             }   
         }
       </div>
