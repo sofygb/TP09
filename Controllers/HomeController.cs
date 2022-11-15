@@ -56,11 +56,26 @@ public class HomeController : Controller
 
         public IActionResult AgregarLibro()
         {
-            return View("AgregarLibro");
+            if (BD.UsuarioLogueado == null)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View("AgregarLibro");
+            }
+            
         }
         public IActionResult AgregarComentario()
         {
-            return View("Comentarios");
+            if (BD.UsuarioLogueado == null)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View("Comentarios");
+            }
         }
         
         public IActionResult CrearCuenta()
@@ -69,7 +84,14 @@ public class HomeController : Controller
         }
         public IActionResult ModificarUsuario(int Id)
         {
-            return View("ModificarPerfil");
+            if (BD.UsuarioLogueado == null)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View("ModificarPerfil");
+            }
         }
 
         [HttpPost]
