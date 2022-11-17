@@ -1,24 +1,51 @@
 ﻿@{
     ViewData["Title"] = "Inicio";
 }
+<<<<<<< HEAD
   <div class="text-center padding2">
       <h1 class="display-4 paddingParaTitulos"><b>Tu biblioteca online</b></h1>
   </div>
+=======
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- ===== Link Swiper's CSS ===== -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <!-- ===== Fontawesome CDN Link ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+        
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--<title>Card with Sliding Feature</title>-->
+</head>
+<body class="padding">
+    <div class="text-center padding2">
+        <h1 class="display-4 diseñodeltituloprincipal">Tu biblioteca online</h1>
+    </div>
+>>>>>>> 46aa1939f1a687bd0a0a766633cecd8a4c412160
   <section class="container-fluid">
     
     <div class="swiper mySwiper container" style="text-align:center;">
         <div class="swiper-wrapper content">
             @{
                 foreach(Libro BuscarLibro in ViewBag.ListadoLibros){
+                  if(BuscarLibro.GeneroPrincipal == "Fantasia")
+                  {
                     <div class="swiper-slide card">
                         <div class="card-content">
                             <div>
                               <img class="imagenes" src="/img/@BuscarLibro.Portada" alt="">
                             </div>
 
-                            <div class="name-profession">
-                            <span class="name">@BuscarLibro.Nombre</span>
-                            <span class="profession">@BuscarLibro.Autor</span>
+                            <div class="name-profession" style="min-height:85px;">
+                              <span class="name">@BuscarLibro.Nombre</span>
+                              <span class="profession">@BuscarLibro.Autor</span>
                             </div>
 
                             <div class="rating">
@@ -41,17 +68,72 @@
                                   </button>
                                 }
                                 else{
-                                  <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary hireMe" data-toggle="modal" data-target="#exampleModalCenter">
                                       Eliminar
                                     </button>
-
                                 }
                               }
                             </div>
                       </div>
+                      
                   </div>
-            }
+                  }
+                  @if(BuscarLibro.GeneroPrincipal == "Terror")
+                  {
+                    <div class="swiper-slide card">
+                        <div class="card-content">
+                            <div>
+                              <img class="imagenes" src="/img/@BuscarLibro.Portada" alt="">
+                            </div>
+
+                            <div class="name-profession" style="min-height:85px;">
+                              <span class="name">@BuscarLibro.Nombre</span>
+                              <span class="profession">@BuscarLibro.Autor</span>
+                            </div>
+
+                            <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+                            
+                            <div class="button">
+                              <button>
+                                  <a href='@Url.Action("VerDetalleLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})'class="Basta">Más info</a>
+                              </button>
+                              
+                              @{if(ViewBag.Sesion == true)
+                                {
+                                  <button>
+                                    <a href='@Url.Action("EliminarLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})' class="Basta hireMe">Eliminar</a>
+                                  </button>
+                                }
+                                else{
+                                    <button type="button" class="btn btn-primary hireMe" data-toggle="modal" data-target="#exampleModalCenter">
+                                      Eliminar
+                                    </button>
+                                }
+                              }
+                            </div>
+                      </div>
+                      
+                  </div>
+                  }             
+            }   
+        }
+      </div>
+
+      <div class="AgregarLibro ">
+        @{if(ViewBag.Sesion == true){
+          <a href='@Url.Action("AgregarLibro", "Home")' class="btn btn-primary hireMe pos diseñodeagregar col-2 mb-2">Agregar Libro  +</a>
+          }
+          else{
+            <button type="button" class="btn btn-primary hireMe pos diseñodeagregar col-2 mb-2" data-toggle="modal" data-target="#exampleModalCenter">
+              Agregar Libro  +
+            </button>
+          }
         }
       </div>
     </div>
@@ -68,11 +150,11 @@
             </button>
           </div>
           <div class="modal-body">
-            Usted no puede eliminar, ni modificar ningun objeto debido a que no abrio su sesión. Por favor registrate o create una cuenta!!
+            Usted no puede eliminar, ni modificar ningun objeto debido a que no inicio sesión. Por favor registrate o create una cuenta!!
           </div>
           <div class="modal-footer">
-            <a class="btn btn-primary button" href='@Url.Action("CrearCuenta", "Home")'>Iniciar Sesión</a>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href='@Url.Action("CrearCuenta", "Home")' class="btn btn-primary hireMe pos diseñodeagregar">Iniciar Sesión</a>
+            <button type="button" class="btn btn-primary hireMe pos diseñodeeliminar" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

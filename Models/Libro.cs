@@ -11,15 +11,16 @@ namespace TP09.Models
         private string _Descripción;
         private string _TW;
         private int _CantLibros;
-        private string _Genero;
+        private string _Generos;
         private string _Categoria;
         private int _IdCalificacion;
         private int _IdGuardar;
         private bool _Guardar;
+        private string _GeneroPrincipal;
 
         public Libro() {}
 
-        public Libro(int IdLibro, string Nombre, string Portada,string Contraportada, string Autor, int CantPaginas, string Descripción, string TW, int CantLibros, string Genero, string Categoria, int IdCalificacion, int IdGuardar, bool Guardar){
+        public Libro(int IdLibro, string Nombre, string Portada,string Contraportada, string Autor, int CantPaginas, string Descripción, string TW, int CantLibros, string Generos, string _GeneroPrincipal, string Categoria, int IdCalificacion, int IdGuardar, bool Guardar){
             _IdLibro = IdLibro;
             _Nombre = Nombre;
             _Portada = Portada;
@@ -29,11 +30,12 @@ namespace TP09.Models
             _Descripción = Descripción;
             _TW = TW;
             _CantLibros = CantLibros;
-            _Genero = Genero;
+            _Generos = Generos;
             _Categoria = Categoria;
             _IdCalificacion = IdCalificacion;
             _IdGuardar = IdGuardar;
             _Guardar = Guardar;
+            _GeneroPrincipal = GeneroPrincipal;
         }
 
         public int IdLibro{
@@ -72,9 +74,9 @@ namespace TP09.Models
             get {return _CantLibros;}
             set {_CantLibros = value;}
         }
-        public string Genero{
-            get {return _Genero;}
-            set {_Genero = value;}
+        public string Generos{
+            get {return _Generos;}
+            set {_Generos = value;}
         }
         public string Categoria{
             get {return _Categoria;}
@@ -92,6 +94,10 @@ namespace TP09.Models
         public bool Guardar{
             get {return _Guardar;}
             set {_Guardar = value;}
+        }
+        public string GeneroPrincipal{
+            get {return _GeneroPrincipal;}
+            set {_GeneroPrincipal = value;}
         }
 
     }

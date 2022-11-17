@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Runtime.InteropServices.ComTypes;
+using System.ComponentModel;
 using System.IO.Compression;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
@@ -36,11 +37,13 @@ public class HomeController : Controller
             ViewBag.ElId = IdLibro;
             ViewBag.Libro = BD.VerInfoLibro(IdLibro);
             ViewBag.Personajes = BD.ListarPersonajes(IdLibro);
+            ViewBag.Sesion = BD.HaySesion();
             return View("VerDetalleLibro");
         }
         public IActionResult VerDetallePersonaje(int IdPersonaje)
         { 
             ViewBag.Personajes = BD.VerInfoPersonaje(IdPersonaje);
+            ViewBag.Sesion = BD.HaySesion();
             return View("VerDetallePersonaje");
         }
         public IActionResult AgregarPersonaje(int IdLibro)
@@ -50,13 +53,45 @@ public class HomeController : Controller
             ViewBag.ListadoPersonaje = BD.VerInfoPersonaje(IdLibro);
             return View("AgregarPersonaje");
         }
+
+        public IActionResult AgregarLibro()
+        {
+            if (BD.UsuarioLogueado == null)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View("AgregarLibro");
+            }
+            
+        }
+        public IActionResult AgregarComentario()
+        {
+            if (BD.UsuarioLogueado == null)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View("Comentarios");
+            }
+        }
+        
         public IActionResult CrearCuenta()
         {
             return View("IniciarSesion");
         }
         public IActionResult ModificarUsuario(int Id)
         {
-            return View("ModificarPerfil");
+            if (BD.UsuarioLogueado == null)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View("ModificarPerfil");
+            }
         }
 
         [HttpPost]
@@ -81,21 +116,41 @@ public class HomeController : Controller
 
         public IActionResult CerrarSesión()
         {
+            BD.CerrarSesion();
             return RedirectToAction("Index");
         }
         public IActionResult GuardarCambiosUsuario(Usuario usu, IFormFile FotoDePerfil) 
         { 
             if(FotoDePerfil.Length > 0) 
             { 
-                string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\img\" + FotoDePerfil.FileName; 
+                string wwwRootLocal = this.Enviroment.ContentRootPath + @"\wwwroot\img\" + FotoDePerfil.FileName; 
                 using (var stream = System.IO.File.Create(wwwRootLocal)) 
                 { 
                     FotoDePerfil.CopyToAsync(stream);  
                 }  
                 usu.FotoDePerfil = FotoDePerfil.FileName;  
             } 
-            return View("ModificarPerfil"); 
-        } 
+            BD.ModificarUsuario(usu);
+            BD.UsuarioLogueado = usu;
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public IActionResult GuardarLibro(Libro Pers, IFormFile Portada, IFormFile Contraportada)
+        {
+            if(Portada.Length > 0 && Contraportada.Length > 0)
+            {
+                string wwwRootLocal = this.Enviroment.ContentRootPath + @"wwwroot\img\" + Portada.FileName + Contraportada.FileName;
+                using (var stream = System.IO.File.Create(wwwRootLocal))
+                {
+                    Portada.CopyToAsync(stream);
+                    Contraportada.CopyToAsync(stream);
+                }
+                Pers.Portada = Portada.FileName;
+                Pers.Contraportada = Contraportada.FileName;
+            }
+            BD.AgregarLibro(Pers);
+            return RedirectToAction("Index");
+        }
         [HttpPost]
         public IActionResult GuardarPersonaje(Personaje Pers, IFormFile Foto)
         {
@@ -115,6 +170,7 @@ public class HomeController : Controller
         
         public IActionResult EliminarPersonaje(int IdPersonaje, int IdLibro)
         {
+            ViewBag.Sesion = BD.HaySesion();
             bool si =  BD.HaySesion();
             if(si = true)
             {
@@ -126,8 +182,17 @@ public class HomeController : Controller
         
         public IActionResult EliminarLibro(int IdLibro)
         {
+            ViewBag.Sesion = BD.HaySesion();
             BD.EliminarLibro(IdLibro);
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult GuardarComentario(calificacion cal)
+        {
+           ViewBag.Sesion = BD.HaySesion();
+           BD.calificacionLibroAjax(cal);
+           return View("VerDetalleLibro");
         }
 
         public IActionResult Privacy()
