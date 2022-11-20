@@ -12,11 +12,7 @@ namespace TP09.Models
 {
     public static class BD
     {
-<<<<<<< HEAD
-         private static string _connectionString = @"Server=A-PHZ2-CIDI-043;DataBase=Qatar2022;Trusted_Connection=True;";
-=======
-        private static string _connectionString = @"Server=A-PHZ2-CIDI-008;DataBase=Qatar2022;Trusted_Connection=True;";
->>>>>>> 46aa1939f1a687bd0a0a766633cecd8a4c412160
+         private static string _connectionString = @"Server=PC-CAMILA\SQLEXPRESS01;DataBase=Qatar2022;Trusted_Connection=True;";
         private static List<Personaje> _ListadoPersonaje = new List<Personaje>();
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
