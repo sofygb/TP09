@@ -66,6 +66,7 @@ public class HomeController : Controller
             }
             
         }
+        //mofificar
         public IActionResult AgregarComentario()
         {
             if (BD.UsuarioLogueado == null)
@@ -82,6 +83,7 @@ public class HomeController : Controller
         {
             return View("IniciarSesion");
         }
+        //modificar
         public IActionResult ModificarUsuario(int Id)
         {
             if (BD.UsuarioLogueado == null)
