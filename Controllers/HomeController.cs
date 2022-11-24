@@ -105,14 +105,15 @@ public class HomeController : Controller
         [HttpPost]
         public IActionResult InicioSesion(Usuario usu)
         {
-            BD.InicioSesion(usu);
-            if (usu == null)
+            bool s = BD.InicioSesion(usu);
+            if(s == true)
             {
-                return View("IniciarSesion");
+                return RedirectToAction("Index");
             }
             else
             {
-                return RedirectToAction("Index");
+                //q en a view le aparezca algo q le avise que puso mal la contraseña
+                return RedirectToAction("CrearCuenta");
             }
         }
 
