@@ -45,7 +45,7 @@
                         @{
                             if(BD.haypersonaje(ViewBag.Libro.IdLibro) == false)
                             {
-                                <p style="color: red;">No hay personas aún</p>
+                                <h5 style="color: red;"><b>No hay personas aún</b></h5>
                             }
                             else{
                             foreach (Personaje Pers in ViewBag.Personajes)
@@ -88,7 +88,7 @@
                     <a href='@Url.Action("AgregarPersonaje", "Home", new{IdLibro = ViewBag.ElId})' class="Basta hireMe diseñodeagregar col-12 col-xl-2">Agregar personaje  +</a>
                     }
                     else{
-                        <button type="button" class="btn hireMe pos diseñodeagregar col-12 col-xl-2" data-toggle="modal" data-target="#exampleModalCenter">
+                        <button type="button" class="btn pos diseñodeagregar col-12 col-xl-2" data-toggle="modal" data-target="#exampleModalCenter">
                         Agregar personaje  +
                         </button>
                     }
