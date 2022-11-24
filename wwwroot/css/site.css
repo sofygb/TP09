@@ -7,21 +7,34 @@ html {
   src: url(./../Fonts/ArtBook.ttf);
 }
 
+body{
+  backdrop-filter: brightness(50%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(https://i.pinimg.com/originals/13/67/a4/1367a4cf23ae0ef52bdb017cacb4c9f9.jpg);
+}
+h1, h2, h3, h4, h5,h6,p{
+  color: #fff;
+}
 .diseñodeltituloprincipal{
   padding-top: 2%;
   padding-bottom: 8%;
   font-family:ArtBook;
+  color: #fff;
   text-align: center;
 }
 .diseñodeltituloprincipal2{
   padding-top: 2%;
   padding-bottom: 2%;
   font-family:ArtBook;
+  color: #fff;
   text-align: center;
 }
 .diseñodeltituloprincipal3{
   padding-top: 2%; 
   font-family:ArtBook;
+  color: #fff;
   text-align: center;
 }
 
