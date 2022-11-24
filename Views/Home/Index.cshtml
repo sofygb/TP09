@@ -60,7 +60,7 @@
                                   </button>
                                 }
                                 else{
-                                    <button type="button" class="btn btn-primary hireMe" data-toggle="modal" data-target="#exampleModalCenter">
+                                    <button type="button" class="btn hireMe" data-toggle="modal" data-target="#exampleModalCenter">
                                       Eliminar
                                     </button>
                                 }
@@ -75,10 +75,10 @@
 
       <div class="AgregarLibro ">
         @{if(ViewBag.Sesion == true){
-          <a href='@Url.Action("AgregarLibro", "Home")' class="btn btn-primary hireMe pos diseñodeagregar col-2 mb-2">Agregar Libro  +</a>
+          <a href='@Url.Action("AgregarLibro", "Home")' class="btn hireMe pos diseñodeagregar col-2 mb-2">Agregar Libro  +</a>
           }
           else{
-            <button type="button" class="btn btn-primary hireMe pos diseñodeagregar col-2 mb-2" data-toggle="modal" data-target="#exampleModalCenter">
+            <button type="button" class="btn hireMe pos diseñodeagregar col-2 mb-2" data-toggle="modal" data-target="#exampleModalCenter">
               Agregar Libro  +
             </button>
           }
@@ -92,7 +92,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">¡Error!</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle" style="color: black;">¡Error!</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -101,8 +101,8 @@
             Usted no puede eliminar, ni modificar ningun objeto debido a que no inicio sesión. Por favor registrate o create una cuenta!!
           </div>
           <div class="modal-footer">
-            <a href='@Url.Action("CrearCuenta", "Home")' class="btn btn-primary hireMe pos diseñodeagregar">Iniciar Sesión</a>
-            <button type="button" class="btn btn-primary hireMe pos diseñodeeliminar" data-dismiss="modal">Close</button>
+            <a href='@Url.Action("CrearCuenta", "Home")' class="btn hireMe pos diseñodeagregar">Iniciar Sesión</a>
+            <button type="button" class="btn hireMe pos diseñodeeliminar" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

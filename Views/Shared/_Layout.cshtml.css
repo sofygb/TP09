@@ -11,6 +11,10 @@ a {
   color: #0077cc;
 }
 
+.colornav{
+  background-color: rgb(249, 248, 244);
+}
+
 .fondo{
   position: relative;
   bottom: 0;

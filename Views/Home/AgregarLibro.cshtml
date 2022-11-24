@@ -2,12 +2,12 @@
     ViewData["Title"] = "Agregar Libro";
 }
 <div class="text-center">
-        <h3 class="display-4 diseñodeltituloprincipal2"><b>Agregar Libro</b></h3>
+        <h3 class="display-4 diseñodeltituloprincipal2">Agregar Libro</h3>
     </div>
 <div class="padding container-fluid">
     <h1 class="display-4 text-center">@ViewBag.NombreLibro</h1>
     <form method= "post" action = '@Url.Action("GuardarLibro","Home")' enctype="multipart/form-data">
-        <div class="Agregar">
+        <div class="Agregar2" style="color: white;">
             <div style="margin-left: 2rem; margin-right: 2rem; margin-bottom: 2rem;">
                 <input type = "hidden" name = "IdLibro" value="@ViewBag.ElId">
             <br><br>
@@ -43,7 +43,10 @@
             <br><br>
             <label for="Contraportada"><b>Contraportada:</b></label>
             <input type="file" id="Contraportada" name="Contraportada" required><br><br>
-            <button type="submit" class="Basta hireMe diseñodeagregar col-2 mb-2">Aceptar</button>
+            
+            <button type="submit" class="diseñodeagregar col-12 col-xl-2">Aceptar</button><br><br>
+            <input type="button" value="Cancel" onclick="history.back()" class="Basta hireMe diseñodeeliminar col-12 col-xl-2"/><br>
+
             </div>
         </div>
     </form>

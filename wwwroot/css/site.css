@@ -6,6 +6,14 @@ html {
   font-family:ArtBook;
   src: url(./../Fonts/ArtBook.ttf);
 }
+a:link{
+  text-decoration-line: none;
+  color: white;
+}
+.sangria{
+  margin-left: 2%;
+  margin-right: 2%;
+}
 
 body{
   backdrop-filter: brightness(50%);
@@ -38,10 +46,23 @@ h1, h2, h3, h4, h5,h6,p{
   text-align: center;
 }
 
+.s {
+  max-width: 1500px;
+}
+
 .Agregar{
   border-style:groove;
   background-color: rgba(177, 177, 177, 0.54);
   margin: 1rem;
+}
+.Agregar3{
+  border-style:groove;
+  background-color: rgba(255, 255, 255, 0.795);
+}
+.Agregar2{
+  border-style:groove;
+  background-color: rgba(56, 56, 56, 0.694);
+
 }
 
 .padding2{
@@ -104,6 +125,7 @@ h1, h2, h3, h4, h5,h6,p{
   transition-timing-function: ease;
   transition-delay: 0s;
   cursor: pointer;
+  color: white;
 }
 
 .mover{

@@ -2,99 +2,101 @@
     ViewData["Title"] = "Detalle Libro";
 }
 
-    <div class="container-fluid">
-        <h1 class="display-4 diseñodeltituloprincipal3">@ViewBag.Libro.Nombre</h1>
-        <h3 class="display-4 text-center" id="autor">De @ViewBag.Libro.Autor</h3>
-        <p></p>
-        <div class="row">
-            <div class="col-md-6" style="display: flex;justify-content: flex-end;align-items: center;">
-                <img src="/img/@ViewBag.Libro.Portada" alt="Portada" width="300rem">
-            </div>
-            <div class="col-md-6" style="display: flex;justify-content: flex-start;align-items: center;">
-                <img src="/img/@ViewBag.Libro.Contraportada" alt="Contraportada" width="300rem">
-            </div>
-        </div>
-        
-        <br> <br>
-        @{
-            if(@ViewBag.Libro.Categoria != "ATP")
-            {
-                <p><b>Clasificado para @ViewBag.Libro.Categoria</b></p>
-            }
-            else if(@ViewBag.Libro.Categoria == "ATP")
-            {
-                <p><b>Clasificado para todo publico.</b></p>
-            }
-            if(@ViewBag.Libro.TW != ""){
-                <p><b>Advertencias este libro contiene:</b><br>@ViewBag.Libro.TW</p>
-            }
-        }
-        <p><b>Genero:</b><br>@ViewBag.Libro.GeneroPrincipal</p>
-        <p><b>Cantidad de páginas que contiene el libro:</b><br>@ViewBag.Libro.CantPaginas</p>
-        @{
-            if(@ViewBag.Libro.CantLibros > 1){
-                <p><b>Cantidad de Libros que contiene la saga en la que pertenece este libro:</b><br>@ViewBag.Libro.CantLibros</p>
-            }
-        }
-        <p><b>Sinopsis: </b><br> @ViewBag.Libro.Descripción</p>
-        <p><b>Personajes:</b><br></p>
-
-        <div class="row centrarElementos" style="text-align: center">
+    <div class="container-fluid s">
+        <div class="Agregar2">
+            <div class="sangria">
+                <h1 class="display-4 diseñodeltituloprincipal3">@ViewBag.Libro.Nombre</h1>
+                <h3 class="display-4 text-center" id="autor">De @ViewBag.Libro.Autor</h3>
+                <p></p>
+                <div class="row">
+                    <div class="col-md-6" style="display: flex;justify-content: flex-end;align-items: center;">
+                        <img src="/img/@ViewBag.Libro.Portada" alt="Portada" width="300rem">
+                    </div>
+                    <div class="col-md-6" style="display: flex;justify-content: flex-start;align-items: center;">
+                        <img src="/img/@ViewBag.Libro.Contraportada" alt="Contraportada" width="300rem">
+                    </div>
+                </div>
+                
+                <br> <br>
                 @{
-                    if(BD.haypersonaje(ViewBag.Libro.IdLibro) == false)
+                    if(@ViewBag.Libro.Categoria != "ATP")
                     {
-                        <p style="color: red;">No hay personas aún</p>
+                        <p><b>Clasificado para @ViewBag.Libro.Categoria</b></p>
                     }
-                    else{
-                    foreach (Personaje Pers in ViewBag.Personajes)
+                    else if(@ViewBag.Libro.Categoria == "ATP")
                     {
-                        <div class="col-md-4 cardy">
-                            <div class="card" style="width: 18rem;">
-                                <img src="/img/@Pers.Foto" class="card-img-top" alt="Personaje">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-6 text-left">
-                                            <h3 class="card-title">@Pers.Nombre</h3>
-                                        </div>
-                                        <div class="col-md"></div>
-                                        <div class="col-md-2 derecha" style="justify-content: flex-end;">
-                                            @{if(ViewBag.Sesion == true)
-                                            {
-                                                <a href='@Url.Action("EliminarPersonaje", "Home", new {IdPersonaje = Pers.IdPersonaje, IdLibro = Pers.IdLibro})' class="" alt="Eliminar personaje">
-                                                    <img src="/img/basura.png" class="card-img-top">
-                                                </a>
+                        <p><b>Clasificado para todo publico.</b></p>
+                    }
+                    if(@ViewBag.Libro.TW != ""){
+                        <p><b>Advertencias este libro contiene:</b><br>@ViewBag.Libro.TW</p>
+                    }
+                }
+                <p><b>Genero:</b><br>@ViewBag.Libro.GeneroPrincipal</p>
+                <p><b>Cantidad de páginas que contiene el libro:</b><br>@ViewBag.Libro.CantPaginas</p>
+                @{
+                    if(@ViewBag.Libro.CantLibros > 1){
+                        <p><b>Cantidad de Libros que contiene la saga en la que pertenece este libro:</b><br>@ViewBag.Libro.CantLibros</p>
+                    }
+                }
+                <p><b>Sinopsis: </b><br> @ViewBag.Libro.Descripción</p>
+                <p><b>Personajes:</b><br></p>
 
-                                            }
-                                            else{
-                                                <img src="/img/basura.png" class="card-img-top" data-toggle="modal" data-target="#exampleModalCenter">
-                                            }
-                                        }
-                                            
+                <div class="row centrarElementos" style="text-align: center">
+                        @{
+                            if(BD.haypersonaje(ViewBag.Libro.IdLibro) == false)
+                            {
+                                <p style="color: red;">No hay personas aún</p>
+                            }
+                            else{
+                            foreach (Personaje Pers in ViewBag.Personajes)
+                            {
+                                <div class="col-md-4 cardy">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="/img/@Pers.Foto" class="card-img-top" alt="Personaje">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6 text-left">
+                                                    <h3 class="card-title" style="color: black;">@Pers.Nombre</h3>
+                                                </div>
+                                                <div class="col-md"></div>
+                                                <div class="col-md-2 derecha" style="justify-content: flex-end;">
+                                                    @{if(ViewBag.Sesion == true)
+                                                    {
+                                                        <a href='@Url.Action("EliminarPersonaje", "Home", new {IdPersonaje = Pers.IdPersonaje, IdLibro = Pers.IdLibro})' class="" alt="Eliminar personaje">
+                                                            <img src="/img/basura.png" class="card-img-top">
+                                                        </a>
+                                                    }
+                                                    else{
+                                                        <img src="/img/basura.png" class="card-img-top" data-toggle="modal" data-target="#exampleModalCenter">
+                                                    }
+                                                }
+                                                    
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <a href='@Url.Action("VerDetallePersonaje", "Home", new {IdPersonaje = Pers.IdPersonaje})' class="btn hireMe diseñodeagregar" style="display: flex; align-items: center;justify-content: center;">Ver info</a>
                                         </div>
                                     </div>
-                                    <br>
-                                    <a href='@Url.Action("VerDetallePersonaje", "Home", new {IdPersonaje = Pers.IdPersonaje})' class="btn btn-primary"style="display: flex; align-items: center;justify-content: center;">Ver info</a>
                                 </div>
-                            </div>
-                        </div>
+                            }
+                        }
+                        }
+                </div>
+                <div style="text-align: right">
+                    <br>
+                    @{if(ViewBag.Sesion == true){
+                    <a href='@Url.Action("AgregarPersonaje", "Home", new{IdLibro = ViewBag.ElId})' class="Basta hireMe diseñodeagregar col-12 col-xl-2">Agregar personaje  +</a>
                     }
-                }
-                }
+                    else{
+                        <button type="button" class="btn hireMe pos diseñodeagregar col-12 col-xl-2" data-toggle="modal" data-target="#exampleModalCenter">
+                        Agregar personaje  +
+                        </button>
+                    }
+                    }
+                </div>
+            <br><br>
+            </div>
         </div>
-        <div style="text-align: right">
-            <br>
-            @{if(ViewBag.Sesion == true){
-            <a href='@Url.Action("AgregarPersonaje", "Home", new{IdLibro = ViewBag.ElId})' class="Basta hireMe diseñodeagregar">Agregar personaje  +</a>
-            }
-            else{
-                <button type="button" class="btn btn-primary hireMe pos diseñodeagregar col-2 mb-2" data-toggle="modal" data-target="#exampleModalCenter">
-                Agregar personaje  +
-                </button>
-            }
-            }
-        </div>
-        <br><br>
-
         <p><b>Reseñas: </b><br>
         
     </div>
@@ -107,7 +109,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">¡Error!</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle" style="color: black;">¡Error!</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -116,8 +118,8 @@
             Usted no puede eliminar, ni modificar ningun objeto debido a que no inicio sesión. Por favor registrate o create una cuenta!!
           </div>
           <div class="modal-footer">
-            <a href='@Url.Action("CrearCuenta", "Home")' class="btn btn-primary hireMe pos diseñodeagregar">Iniciar Sesión</a>
-            <button type="button" class="btn btn-primary hireMe pos diseñodeeliminar" data-dismiss="modal">Close</button>
+            <a href='@Url.Action("CrearCuenta", "Home")' class="btn hireMe pos diseñodeagregar">Iniciar Sesión</a>
+            <button type="button" class="btn hireMe pos diseñodeeliminar" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
