@@ -3,7 +3,7 @@
 }
 
     <div class="container-fluid">
-        <h1 class="display-4 text-center"><b>@ViewBag.Libro.Nombre</b></h1>
+        <h1 class="display-4 diseñodeltituloprincipal3">@ViewBag.Libro.Nombre</h1>
         <h3 class="display-4 text-center" id="autor">De @ViewBag.Libro.Autor</h3>
         <p></p>
         <div class="row">
@@ -29,7 +29,7 @@
                 <p><b>Advertencias este libro contiene:</b><br>@ViewBag.Libro.TW</p>
             }
         }
-        <p><b>Genero:</b><br>@ViewBag.Libro.Genero</p>
+        <p><b>Genero:</b><br>@ViewBag.Libro.GeneroPrincipal</p>
         <p><b>Cantidad de páginas que contiene el libro:</b><br>@ViewBag.Libro.CantPaginas</p>
         @{
             if(@ViewBag.Libro.CantLibros > 1){
@@ -41,6 +41,11 @@
 
         <div class="row centrarElementos" style="text-align: center">
                 @{
+                    if(BD.haypersonaje(ViewBag.Libro.IdLibro) == false)
+                    {
+                        <p style="color: red;">No hay personas aún</p>
+                    }
+                    else{
                     foreach (Personaje Pers in ViewBag.Personajes)
                     {
                         <div class="col-md-4 cardy">
@@ -74,6 +79,7 @@
                         </div>
                     }
                 }
+                }
         </div>
         <div style="text-align: right">
             <br>
@@ -88,7 +94,7 @@
             }
         </div>
 
-        <p><b>COMENTARIOS: </b><br>
+        <p><b>Reseñas: </b><br>
         
     </div>
 <br>

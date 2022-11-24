@@ -66,6 +66,20 @@ namespace TP09.Models
             }
             return hayFotoDePerfil;
         }
+        public static bool haypersonaje(int IdLibro)
+        {
+            Libro librohay;
+            bool s = false;
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT * FROM Personajes WHERE IdLibro = @pLibro";
+                librohay = BD.QueryFirstOrDefault<Libro>(sql, new {pLibro = IdLibro});
+            }
+            if(librohay != null)
+            {
+                s = true;
+            }
+            return s;
+        }
         public static bool InicioSesion(Usuario usu)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){

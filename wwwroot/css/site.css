@@ -11,6 +11,18 @@ html {
   padding-top: 2%;
   padding-bottom: 8%;
   font-family:ArtBook;
+  text-align: center;
+}
+.diseñodeltituloprincipal2{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-family:ArtBook;
+  text-align: center;
+}
+.diseñodeltituloprincipal3{
+  padding-top: 2%; 
+  font-family:ArtBook;
+  text-align: center;
 }
 
 .Agregar{

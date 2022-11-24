@@ -2,7 +2,7 @@
     ViewData["Title"] = "Detalle Personaje";
 }
 
-<h1 class="display-4 text-center"><b>@ViewBag.Personajes.Nombre</b></h1> 
+<h1 class="display-4 diseñodeltituloprincipal3">@ViewBag.Personajes.Nombre</h1> 
 <div class="conteiner-fluid padding">
     <div class="borde">
             <div class="orden">
@@ -15,7 +15,6 @@
                     </div>
                     
                     <div class="col-md-6">
-                            <h5>Información:</h5>
                             <p><b>Fecha de nacimiento: </b><br>@ViewBag.Personajes.FechaNacimiento.ToShortDateString()</p>
                             <p><b>Estado: </b><br>@ViewBag.Personajes.Estado</p>
                             <p><b>Genero: </b><br>@ViewBag.Personajes.Genero</p>
