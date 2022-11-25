@@ -16,7 +16,16 @@
                         <img src="/img/@ViewBag.Libro.Contraportada" alt="Contraportada" width="300rem">
                     </div>
                 </div>
-                
+                @{if(ViewBag.Sesion == true)
+                    {
+                        <a href='@Url.Action("GuardarPersonaje", "Home", new {IdLibro = ViewBag.Libro.IdLibro})' class="" alt="Guardar @ViewBag.Libro.Nombre">
+                            <img src="/img/singuardar.png" class="iconoGuardar">
+                        </a>
+                    }
+                    else{
+                        <img src="/img/singuardar.png" class="card-img-top" data-toggle="modal" data-target="#exampleModalCenter">
+                    }
+                }
                 <br> <br>
                 @{
                     if(@ViewBag.Libro.Categoria != "ATP")
