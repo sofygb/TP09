@@ -35,7 +35,7 @@ namespace TP09.Models
             get {return _IdLeyendo;}
             set {_IdLeyendo = value;}
         }
-        public string Leido{
+        public string IdLeido{
             get {return _IdLeido;}
             set {_IdLeido = value;}
         }

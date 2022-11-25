@@ -12,7 +12,7 @@ namespace TP09.Models
 {
     public static class BD
     {
-         private static string _connectionString = @"Server=PC-CAMILA\SQLEXPRESS01;DataBase=Qatar2022;Trusted_Connection=True;";
+        private static string _connectionString = @"Server=PC-CAMILA\SQLEXPRESS01;DataBase=Qatar2022;Trusted_Connection=True;";
         private static List<Personaje> _ListadoPersonaje = new List<Personaje>();
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
@@ -137,6 +137,24 @@ namespace TP09.Models
             using(SqlConnection BD = new SqlConnection(_connectionString)){
                 string sql = "SELECT * FROM Libros WHERE IdLibro = @libroselect";
                 MiLibro = BD.QueryFirstOrDefault<Libro>(sql, new { libroselect = IdLibro});
+            }
+            return MiLibro;
+        }
+        public static Biblioteca VerLibrosDeBiblioteca(int IdUsuario)
+        {
+            Biblioteca MiLibro;
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT * FROM Biblioteca WHERE IdUsuario = @pIdUsuario";
+                MiLibro = BD.QueryFirstOrDefault<Biblioteca>(sql, new { pIdUsuario = IdUsuario});
+            }
+            return MiLibro;
+        }
+        public static Biblioteca GuardarLibro(Biblioteca guardar)
+        {
+            Biblioteca MiLibro;
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "INSERT INTO biblioteca(IdUsuario, IdProxima, IdLeyendo, IdLeido) values (@pIdUsuario, @pIdProxima, @pIdLeyendo, @pIdLeido)";
+                MiLibro = BD.QueryFirstOrDefault<Biblioteca>(sql, new { pIdUsuario = guardar.IdUsuario, pIdProxima = guardar.IdProxima, pIdLeyendo = guardar.IdLeyendo, pIdLeido = guardar.IdLeido});
             }
             return MiLibro;
         }
