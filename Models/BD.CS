@@ -113,15 +113,6 @@ namespace TP09.Models
                 nose = BD.Execute(sql, new {pNombreDeUsuario = usu.NombreDeUsuario, pFotoDePerfil = usu.FotoDePerfil, pIdUsuario = usu.IdUsuario});
             }
         }
-        public static int EliminarPersonaje(int IdPersonaje)
-        {
-            int RegistrosEliminados = 0;
-            string sql = "DELETE FROM Personajes WHERE IdPersonaje = @bPersonaje";
-            using(SqlConnection BD = new SqlConnection(_connectionString)){
-                RegistrosEliminados = BD.Execute(sql, new {bPersonaje = IdPersonaje });
-            }
-            return RegistrosEliminados;
-        }
        public static int EliminarLibro(int pIdLibro)
         {
             int RegistrosEliminados = 0;
@@ -149,14 +140,49 @@ namespace TP09.Models
             }
             return MiLibro;
         }
-        public static Biblioteca GuardarLibro(Biblioteca guardar)
+        public static Biblioteca GuardarLibro(int idUsuario, int IdLibro)
         {
             Biblioteca MiLibro;
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "INSERT INTO biblioteca(IdUsuario, IdProxima, IdLeyendo, IdLeido) values (@pIdUsuario, @pIdProxima, @pIdLeyendo, @pIdLeido)";
-                MiLibro = BD.QueryFirstOrDefault<Biblioteca>(sql, new { pIdUsuario = guardar.IdUsuario, pIdProxima = guardar.IdProxima, pIdLeyendo = guardar.IdLeyendo, pIdLeido = guardar.IdLeido});
+                string sql = "INSERT INTO biblioteca(IdUsuario, IdLlibro) values (@pIdUsuario, @pIdLibro)";
+                MiLibro = BD.QueryFirstOrDefault<Biblioteca>(sql, new {pIdUsuario = idUsuario, pIdLibro = IdLibro});
             }
             return MiLibro;
+        }
+        public static int EliminarPersonaje(int IdPersonaje)
+        {
+            int RegistrosEliminados = 0;
+            string sql = "DELETE FROM Personajes WHERE IdPersonaje = @bPersonaje";
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                RegistrosEliminados = BD.Execute(sql, new {bPersonaje = IdPersonaje });
+            }
+            return RegistrosEliminados;
+        }
+        public static int EliminardeGuardado(int idUsuario, int IdLibro)
+        {
+            int RegistrosEliminados = 0;
+            string sql = "DELETE FROM biblioteca * WHERE IdUsuario = @pIdUsuario and IdLibro = @pIdLibro";
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                RegistrosEliminados = BD.Execute(sql, new {pIdUsuario = idUsuario, pIdLibro = IdLibro});
+            }
+            return RegistrosEliminados;
+        }
+        public static bool yaestabaguardado(int idUsuario, int IdLibro)
+        {
+            bool estabaguardado = false;
+            Biblioteca MiLibro;
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT * FROM biblioteca WHERE IdUsuario = @pIdUsuario and IdLibro = @pIdLibro";
+                MiLibro = BD.QueryFirstOrDefault<Biblioteca>(sql, new {pIdUsuario = idUsuario, pIdLibro = IdLibro});
+            }
+            if(MiLibro == null)
+            {
+                estabaguardado = false;
+            }
+            else{
+                estabaguardado = true;
+            }
+            return estabaguardado;
         }
         public static Personaje VerInfoPersonaje(int IdPersonaje)
         {

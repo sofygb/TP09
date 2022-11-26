@@ -103,6 +103,17 @@ public class HomeController : Controller
             return RedirectToAction("Index");
         }
         [HttpPost]
+        public IActionResult GuardarPersonaje(int IdUsuario, int IdLibro)
+        {
+            if(BD.yaestabaguardado(IdUsuario, IdLibro) == false){
+                BD.GuardarLibro(IdUsuario, IdLibro);
+            }
+            else{
+                BD.EliminardeGuardado(IdUsuario, IdLibro);
+            }
+            return RedirectToAction("VerDetalleLibro");
+        }
+        [HttpPost]
         public IActionResult InicioSesion(Usuario usu)
         {
             bool s = BD.InicioSesion(usu);
