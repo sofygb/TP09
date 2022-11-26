@@ -2,6 +2,14 @@ html {
   font-size: 14px;
 }
 
+body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background: rgba(0, 0, 0, 0.7) url('https://i.pinimg.com/originals/13/67/a4/1367a4cf23ae0ef52bdb017cacb4c9f9.jpg');
+  background-blend-mode: darken;
+}
+
 @font-face{
   font-family:ArtBook;
   src: url(./../Fonts/ArtBook.ttf);
@@ -15,13 +23,6 @@ a:link{
   margin-right: 2%;
 }
 
-body{
-  backdrop-filter: brightness(50%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-image: url(https://i.pinimg.com/originals/13/67/a4/1367a4cf23ae0ef52bdb017cacb4c9f9.jpg);
-}
 h1, h2, h3, h4, h5,h6,p{
   color: #fff;
 }
