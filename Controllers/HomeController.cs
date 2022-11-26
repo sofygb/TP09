@@ -53,7 +53,7 @@ public class HomeController : Controller
             ViewBag.ListadoPersonaje = BD.VerInfoPersonaje(IdLibro);
             return View("AgregarPersonaje");
         }
-
+        //q es esto??
         public IActionResult AgregarLibro()
         {
             if (BD.UsuarioLogueado == null)
@@ -103,7 +103,7 @@ public class HomeController : Controller
             return RedirectToAction("Index");
         }
         [HttpPost]
-        public IActionResult GuardarPersonaje(int IdUsuario, int IdLibro)
+        public IActionResult GuardarLibro(int IdUsuario, int IdLibro)
         {
             if(BD.yaestabaguardado(IdUsuario, IdLibro) == false){
                 BD.GuardarLibro(IdUsuario, IdLibro);
