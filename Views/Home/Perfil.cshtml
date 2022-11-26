@@ -3,7 +3,7 @@
 }
 <div class="conteiner-fluid text padding2">
     <h3 class="display-4 diseñodeltituloprincipal2">Perfil</h3>
-    <div class="Agregar3">
+    <div class="Agregar2">
             <div class="orden">
                 <div class="row CuadroDeInfoPers" style="padding-bottom: 2rem">
                     <div class="col-md-auto">
@@ -20,16 +20,30 @@
                                 }
                                 else
                                 {
-                                    <img src="/img/@BD.NombraImagen()" class="round">
+                                    <img src="/img/@BD.NombraImagen()" class="round imagenes">
                                 } 
                             </a>
                             }
                     </div>
                     
                     <div class="col-md-6">
-                            <h4><b>@BD.UsuarioLogueado.NombreDeUsuario</b></h4>
-                            <h6><b>@BD.UsuarioLogueado.Nombre</b></h6>
-                            <h6><b>@BD.UsuarioLogueado.Apellido</b></h6>
+                            <h3 style="padding-bottom: 2rem; padding-top: rem;"><b>Nombre de Usuari: </b>@BD.UsuarioLogueado.NombreDeUsuario</h3>
+                            <h5><b>Nombre: </b>@BD.UsuarioLogueado.Nombre @BD.UsuarioLogueado.Apellido</h5>
+                    </div>
+                    <div>
+                        <h3 style="padding-bottom: 2rem; padding-top: rem;"><b>Libros guardados:</b></h3>
+                        <div class="row centrarElementos" style="text-align: center">
+                            @{
+                                if("hola" == "hola")
+                                {
+                                    <h5 style="color: red;"><b>No hay Libros aun</b></h5>
+                                }
+                                else{
+                                
+                                    }
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <a class="diseñodeagregar col-12 col-xl-2" href="/Home/ModificarUsuario" role="button">edit profile</a>

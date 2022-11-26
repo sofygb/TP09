@@ -8,15 +8,21 @@ a.navbar-brand {
 }
 
 a {
-  color: #0077cc;
+  color: #000000;
+}
+
+.tamañofotoperfilmax{
+  max-width: 60%;
+  max-height: 60%;
+  height: 50px;
+}
+
+.mover{
+  display: flex; justify-content: flex-end;
 }
 
 .colornav{
   background-color: rgb(249, 248, 244);
-}
-
-.fondo{
-  
 }
 
 .responsiveSiteFooter__contents{

@@ -17,6 +17,8 @@ namespace TP09.Models
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
         private static List<Usuario> _ListadoUsuario = new List<Usuario>();
+        private static List<Biblioteca> _ListadoLibrosBiblioteca = new List<Biblioteca>();
+
         public static Usuario UsuarioLogueado = null;
         private static bool haySesionAbierta = false;
         private static bool hayFotoDePerfil = false;
@@ -200,6 +202,14 @@ namespace TP09.Models
                 _ListadoLibros = BD.Query<Libro>(sql).ToList();
             }
             return _ListadoLibros;
+        }
+        public static List<Biblioteca> ListarLibrosdeBiblioteca(int idusuario, int idbiblioteca)
+        {
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT * FROM Biblioteca Where IdUsuario = @pUsuario and IdBiblioteca = @pBiblioteca";
+                _ListadoLibrosBiblioteca = BD.Query<Biblioteca>(sql, new{pUsuario = idusuario, pBiblioteca = idbiblioteca}).ToList();
+            }
+            return _ListadoLibrosBiblioteca;
         }
         
         public static List<Personaje> ListarPersonajes(int IdLibro)

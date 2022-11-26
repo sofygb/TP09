@@ -25,9 +25,10 @@ public class HomeController : Controller
             ViewBag.Sesion = BD.HaySesion();
             return View();
         }
-        public IActionResult Perfil(int usu)
+        public IActionResult Perfil(int usu, int idbib)
         {
             ViewBag.ElId = usu;
+            ViewBag.Libros = BD.ListarLibrosdeBiblioteca(usu, idbib);
             ViewBag.NombreUsuario = BD.VerPerfil(usu);
             return View("Perfil");
         }
@@ -163,7 +164,7 @@ public class HomeController : Controller
                 Pers.Contraportada = Contraportada.FileName;
             }
             BD.AgregarLibro(Pers);
-            return RedirectToAction("Index");
+            return View("Index");
         }
         [HttpPost]
         public IActionResult GuardarPersonaje(Personaje Pers, IFormFile Foto)

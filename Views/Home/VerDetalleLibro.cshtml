@@ -19,7 +19,7 @@
                 <div style="display: flex; justify-content: center; padding: 2rem;">
                     @{if(ViewBag.Sesion == true)
                         {
-                            <a href='@Url.Action("GuardarLibro", "Home", new {IdUsuario = BD.UsuarioLogueado.IdUsuario, IdLibro = ViewBag.Libro.IdLibro})' class="" alt="Guardar @ViewBag.Libro.Nombre">
+                            <a href='@Url.Action("GuardarLibro", "Home", new {IdUsuario = BD.UsuarioLogueado.IdUsuario, IdLibro = ViewBag.Libro.IdLibro})' class="" alt="">
                                 <img src="/img/singuardar.png" class="iconoGuardar">
                             </a>
                         }
