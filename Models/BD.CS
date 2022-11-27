@@ -17,41 +17,29 @@ namespace TP09.Models
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
         private static List<Usuario> _ListadoUsuario = new List<Usuario>();
-        private static List<Biblioteca> _ListadoLibrosBiblioteca = new List<Biblioteca>();
+        
+        private static List<Libro> _ListadoLibrosBiblioteca = new List<Libro>();
 
         public static Usuario UsuarioLogueado = null;
         private static bool haySesionAbierta = false;
         private static bool hayFotoDePerfil = false;
 
-        public static List<Personaje> AgregarPersonaje(Personaje Pers)
-        {
-            using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "INSERT INTO Personajes(IdLibro, Nombre, FechaNacimiento, Foto, Descripcion, Estado, Genero, Nacionalidad) VALUES (@pIdLibro, @pNombre, @pFechaNacimiento, @pFoto, @pDescripcion, @pEstado, @pGenero, @pNacionalidad);";
-                _ListadoPersonaje = BD.Query<Personaje>(sql, new {pIdLibro = Pers.IdLibro, pNombre = Pers.Nombre, pFechaNacimiento=Pers.FechaNacimiento, pFoto=Pers.Foto, pDescripcion=Pers.Descripcion, pEstado=Pers.Estado, pGenero=Pers.Genero, pNacionalidad=Pers.Nacionalidad}).ToList();
-            }
-            return _ListadoPersonaje;
-        }
-        public static List<Libro> AgregarLibro(Libro Lib)
-        {
-            using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "INSERT INTO Libros(Nombre, Portada, Contraportada, Autor, CantPaginas, Descripción, TW, CantLibros, Generos, Categoria, GeneroPrincipal) VALUES (@pNombre, @pPortada, @pContraportada, @pAutor, @pCantPaginas, @pDescripción, @pTW, @pCantLibros,  @pGeneros, @pCategoria, @pGeneroPrincipal);";
-                _ListadoLibros = BD.Query<Libro>(sql, new {pNombre = Lib.Nombre, pPortada=Lib.Portada, pContraportada=Lib.Contraportada, pAutor=Lib.Autor, pCantPaginas=Lib.CantPaginas, pDescripción=Lib.Descripción, pTW=Lib.TW, pCantLibros=Lib.CantLibros, pGeneros=Lib.Generos, pCategoria=Lib.Categoria, pGeneroPrincipal=Lib.GeneroPrincipal}).ToList();
-            }
-            return _ListadoLibros;
-        }
-        public static List<Usuario> CrearUsuario(Usuario usu)
-        {
-            using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "INSERT INTO Usuario(Nombre, Apellido, NombreDeUsuario, Contraseña, Activo, Mail, FechaDeCumplaños, PermisoDeEditor, FotoDePerfil) VALUES (@pNombre, @pApellido, @pNombreDeUsuario, @pContraseña, @pActivo, @pMail, @pFechaDeCumplaños, @pPermisoDeEditor, NULL);";
-                _ListadoUsuario = BD.Query<Usuario>(sql, new {pNombre = usu.Nombre, pApellido = usu.Apellido, pNombreDeUsuario = usu.NombreDeUsuario, pContraseña=usu.Contraseña, pActivo=1, pMail=usu.Mail, pFechaDeCumplaños=usu.FechaDeCumplaños, pPermisoDeEditor=0, pFotoDePerfil=0}).ToList();
-            }
-            UsuarioLogueado = usu;
-            haySesionAbierta = true;
-            return _ListadoUsuario;
-        }
         public static string NombraImagen()
         {
             return UsuarioLogueado.FotoDePerfil;
+        }
+        public static bool HaySesion()
+        {
+            return haySesionAbierta;
+        }
+        public static Usuario VerPerfil(int IdUsuario)
+        {
+            Usuario usua;
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT * FROM Usuario WHERE IdUsuario = @pIdUsuario";
+                usua = BD.QueryFirstOrDefault<Usuario>(sql, new {pIdUsuario = IdUsuario});
+            }
+            return usua;
         }
         public static bool HayFotoDePerfil(int IdUsuario)
         {
@@ -94,18 +82,15 @@ namespace TP09.Models
             }
             return haySesionAbierta;
         }
-        public static bool HaySesion()
+        public static List<Usuario> CrearUsuario(Usuario usu)
         {
-            return haySesionAbierta;
-        }
-        public static Usuario VerPerfil(int IdUsuario)
-        {
-            Usuario usua;
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "SELECT * FROM Usuario WHERE IdUsuario = @pIdUsuario";
-                usua = BD.QueryFirstOrDefault<Usuario>(sql, new {pIdUsuario = IdUsuario});
+                string sql = "INSERT INTO Usuario(Nombre, Apellido, NombreDeUsuario, Contraseña, Activo, Mail, FechaDeCumplaños, PermisoDeEditor, FotoDePerfil) VALUES (@pNombre, @pApellido, @pNombreDeUsuario, @pContraseña, @pActivo, @pMail, @pFechaDeCumplaños, @pPermisoDeEditor, NULL);";
+                _ListadoUsuario = BD.Query<Usuario>(sql, new {pNombre = usu.Nombre, pApellido = usu.Apellido, pNombreDeUsuario = usu.NombreDeUsuario, pContraseña=usu.Contraseña, pActivo=1, pMail=usu.Mail, pFechaDeCumplaños=usu.FechaDeCumplaños, pPermisoDeEditor=0, pFotoDePerfil=0}).ToList();
             }
-            return usua;
+            UsuarioLogueado = usu;
+            haySesionAbierta = true;
+            return _ListadoUsuario;
         }
         public static void ModificarUsuario(Usuario usu)
         {
@@ -115,7 +100,24 @@ namespace TP09.Models
                 nose = BD.Execute(sql, new {pNombreDeUsuario = usu.NombreDeUsuario, pFotoDePerfil = usu.FotoDePerfil, pIdUsuario = usu.IdUsuario});
             }
         }
-       public static int EliminarLibro(int pIdLibro)
+        public static List<Personaje> AgregarPersonaje(Personaje Pers)
+        {
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "INSERT INTO Personajes(IdLibro, Nombre, FechaNacimiento, Foto, Descripcion, Estado, Genero, Nacionalidad) VALUES (@pIdLibro, @pNombre, @pFechaNacimiento, @pFoto, @pDescripcion, @pEstado, @pGenero, @pNacionalidad);";
+                _ListadoPersonaje = BD.Query<Personaje>(sql, new {pIdLibro = Pers.IdLibro, pNombre = Pers.Nombre, pFechaNacimiento=Pers.FechaNacimiento, pFoto=Pers.Foto, pDescripcion=Pers.Descripcion, pEstado=Pers.Estado, pGenero=Pers.Genero, pNacionalidad=Pers.Nacionalidad}).ToList();
+            }
+            return _ListadoPersonaje;
+        }
+        public static List<Libro> AgregarLibro(Libro Lib)
+        {
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "INSERT INTO Libros(Nombre, Portada, Contraportada, Autor, CantPaginas, Descripción, TW, CantLibros, Generos, Categoria, GeneroPrincipal) VALUES (@pNombre, @pPortada, @pContraportada, @pAutor, @pCantPaginas, @pDescripción, @pTW, @pCantLibros,  @pGeneros, @pCategoria, @pGeneroPrincipal);";
+                _ListadoLibros = BD.Query<Libro>(sql, new {pNombre = Lib.Nombre, pPortada=Lib.Portada, pContraportada=Lib.Contraportada, pAutor=Lib.Autor, pCantPaginas=Lib.CantPaginas, pDescripción=Lib.Descripción, pTW=Lib.TW, pCantLibros=Lib.CantLibros, pGeneros=Lib.Generos, pCategoria=Lib.Categoria, pGeneroPrincipal=Lib.GeneroPrincipal}).ToList();
+            }
+            return _ListadoLibros;
+        }
+        
+        public static int EliminarLibro(int pIdLibro)
         {
             int RegistrosEliminados = 0;
             string sp = "EliminarUnLibro";
@@ -123,33 +125,6 @@ namespace TP09.Models
                 RegistrosEliminados = BD.Execute(sp, new {IdLibro = pIdLibro},  commandType: CommandType.StoredProcedure);
             }
             return RegistrosEliminados;
-        }
-        public static Libro VerInfoLibro(int IdLibro)
-        {
-            Libro MiLibro;
-            using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "SELECT * FROM Libros WHERE IdLibro = @libroselect";
-                MiLibro = BD.QueryFirstOrDefault<Libro>(sql, new { libroselect = IdLibro});
-            }
-            return MiLibro;
-        }
-        public static Biblioteca VerLibrosDeBiblioteca(int IdUsuario)
-        {
-            Biblioteca MiLibro;
-            using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "SELECT * FROM Biblioteca WHERE IdUsuario = @pIdUsuario";
-                MiLibro = BD.QueryFirstOrDefault<Biblioteca>(sql, new { pIdUsuario = IdUsuario});
-            }
-            return MiLibro;
-        }
-        public static Biblioteca GuardarLibro(int idUsuario, int IdLibro)
-        {
-            Biblioteca MiLibro;
-            using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "INSERT INTO biblioteca(IdUsuario, IdLibro) values (@pIdUsuario, @pIdLibro)";
-                MiLibro = BD.QueryFirstOrDefault<Biblioteca>(sql, new {pIdUsuario = idUsuario, pIdLibro = IdLibro});
-            }
-            return MiLibro;
         }
         public static int EliminarPersonaje(int IdPersonaje)
         {
@@ -169,6 +144,23 @@ namespace TP09.Models
             }
             return RegistrosEliminados;
         }
+        public static bool haylibrosguardadosensuperfil(int idUsuario)
+        {
+            bool estabaguardado = false;
+            Biblioteca MiLibro;
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT * FROM biblioteca WHERE IdUsuario = @pIdUsuario";
+                MiLibro = BD.QueryFirstOrDefault<Biblioteca>(sql, new {pIdUsuario = idUsuario});
+            }
+            if(MiLibro == null)
+            {
+                estabaguardado = false;
+            }
+            else{
+                estabaguardado = true;
+            }
+            return estabaguardado;
+        }
         public static bool yaestabaguardado(int idUsuario, int IdLibro)
         {
             bool estabaguardado = false;
@@ -186,6 +178,33 @@ namespace TP09.Models
             }
             return estabaguardado;
         }
+        public static Libro VerInfoLibro(int IdLibro)
+        {
+            Libro MiLibro;
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT * FROM Libros WHERE IdLibro = @libroselect";
+                MiLibro = BD.QueryFirstOrDefault<Libro>(sql, new { libroselect = IdLibro});
+            }
+            return MiLibro;
+        }
+        public static List<Libro> ListarLibrosdeBiblioteca(int pidusuario)
+        {
+            string sp = "sp_ListarLibrosGuardados";
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                _ListadoLibrosBiblioteca = BD.Query<Libro>(sp, new {IdUsuario = pidusuario},  commandType: CommandType.StoredProcedure).ToList();
+            }
+            return _ListadoLibrosBiblioteca;
+        }
+
+        public static Biblioteca GuardarLibro(int idUsuario, int IdLibro)
+        {
+            Biblioteca MiLibro;
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "INSERT INTO biblioteca(IdUsuario, IdLibro) values (@pIdUsuario, @pIdLibro)";
+                MiLibro = BD.QueryFirstOrDefault<Biblioteca>(sql, new {pIdUsuario = idUsuario, pIdLibro = IdLibro});
+            }
+            return MiLibro;
+        }
         public static Personaje VerInfoPersonaje(int IdPersonaje)
         {
             Personaje InfoPersonaje;
@@ -202,14 +221,6 @@ namespace TP09.Models
                 _ListadoLibros = BD.Query<Libro>(sql).ToList();
             }
             return _ListadoLibros;
-        }
-        public static List<Biblioteca> ListarLibrosdeBiblioteca(int idusuario, int idbiblioteca)
-        {
-            using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "SELECT * FROM Biblioteca Where IdUsuario = @pUsuario and IdBiblioteca = @pBiblioteca";
-                _ListadoLibrosBiblioteca = BD.Query<Biblioteca>(sql, new{pUsuario = idusuario, pBiblioteca = idbiblioteca}).ToList();
-            }
-            return _ListadoLibrosBiblioteca;
         }
         
         public static List<Personaje> ListarPersonajes(int IdLibro)

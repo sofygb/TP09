@@ -7,7 +7,8 @@
             <div class="orden">
                 <div class="row CuadroDeInfoPers" style="padding-bottom: 2rem">
                     <div class="col-md-auto">
-                        @if (BD.UsuarioLogueado==null)
+                        <!--esto para que sirve? nunca va a llegar a esta view si nunca se log in-->
+                        @if (BD.UsuarioLogueado==null) 
                         {
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CrearCuenta">Iniciar Sesión</a>
                         } 
@@ -20,34 +21,53 @@
                                 }
                                 else
                                 {
-                                    <img src="/img/@BD.NombraImagen()" class="round imagenes">
+                                    <img src="/img/@BD.NombraImagen()" class="round imagenes2">
                                 } 
                             </a>
                             }
                     </div>
                     
                     <div class="col-md-6">
-                            <h3 style="padding-bottom: 2rem; padding-top: rem;"><b>Nombre de Usuari: </b>@BD.UsuarioLogueado.NombreDeUsuario</h3>
-                            <h5><b>Nombre: </b>@BD.UsuarioLogueado.Nombre @BD.UsuarioLogueado.Apellido</h5>
-                    </div>
-                    <div>
-                        <h3 style="padding-bottom: 2rem; padding-top: rem;"><b>Libros guardados:</b></h3>
-                        <div class="row centrarElementos" style="text-align: center">
-                            @{
-                                if("hola" == "hola")
-                                {
-                                    <h5 style="color: red;"><b>No hay Libros aun</b></h5>
-                                }
-                                else{
-                                
-                                    }
-                                }
-                            </div>
+                        <h3><b>Nombre de usuario: </b>@BD.UsuarioLogueado.NombreDeUsuario</h3>
+                        <h5><b>Nombre: </b>@BD.UsuarioLogueado.Nombre @BD.UsuarioLogueado.Apellido</h5>
+                        <div style="padding-top: 1.5rem;">
+                            <a class="diseñodeagregar col-md-12 col-xl-2" href="/Home/ModificarUsuario" role="button">edit profile</a>
                         </div>
                     </div>
                 </div>
-                <a class="diseñodeagregar col-12 col-xl-2" href="/Home/ModificarUsuario" role="button">edit profile</a>
+
+                <h3 style="padding-top: 2rem;"><b>Libros guardados:</b></h3>
+                        <div class="row" style="margin-left: 0.1rem;">
+                            @{
+                                if(BD.haylibrosguardadosensuperfil(BD.UsuarioLogueado.IdUsuario) == true)
+                                {
+                                    foreach(Libro bib in ViewBag.LibrosGuardados){
+                                        <div class="col-md-4 cardy">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="/img/@bib.Portada" class="card-img-top tamañodelasportadasenperfil" alt="Portada">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6 text-left">
+                                                            <h3 class="card-title" style="color: black;">@bib.Nombre</h3>
+                                                        </div>
+                                                        <div class="col-md"></div>
+                                                        <div class="col-md-2 derecha" style="justify-content: flex-end;">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else{
+                                    <h5 style="color: red;"><b>No hay Libros aun</b></h5>
+                                }
+                            }
+                        </div>
             </div>
+        </div>
     </div>
 </div>
 

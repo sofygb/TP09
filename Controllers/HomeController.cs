@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using TP09.Models;
 
 namespace TP09.Controllers;
-
+//esto se puede modularizar muchisimo
 public class HomeController : Controller
 {
         private IWebHostEnvironment Enviroment;
@@ -25,11 +25,9 @@ public class HomeController : Controller
             ViewBag.Sesion = BD.HaySesion();
             return View();
         }
-        public IActionResult Perfil(int usu, int idbib)
+        public IActionResult Perfil()
         {
-            ViewBag.ElId = usu;
-            ViewBag.Libros = BD.ListarLibrosdeBiblioteca(usu, idbib);
-            ViewBag.NombreUsuario = BD.VerPerfil(usu);
+            ViewBag.LibrosGuardados = BD.ListarLibrosdeBiblioteca(BD.UsuarioLogueado.IdUsuario);
             return View("Perfil");
         }
 
