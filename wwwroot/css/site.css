@@ -144,6 +144,11 @@ h1, h2, h3, h4, h5,h6,p{
   height: 400px;
 }
 
+.iconoGuardar2{
+  max-width: 120%;
+  max-height: 120%;
+  height: 40px;
+}
 .iconoGuardar{
   max-width: 50%;
   max-height: 50%;

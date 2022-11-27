@@ -146,7 +146,7 @@ namespace TP09.Models
         {
             Biblioteca MiLibro;
             using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "INSERT INTO biblioteca(IdUsuario, IdLlibro) values (@pIdUsuario, @pIdLibro)";
+                string sql = "INSERT INTO biblioteca(IdUsuario, IdLibro) values (@pIdUsuario, @pIdLibro)";
                 MiLibro = BD.QueryFirstOrDefault<Biblioteca>(sql, new {pIdUsuario = idUsuario, pIdLibro = IdLibro});
             }
             return MiLibro;
@@ -163,7 +163,7 @@ namespace TP09.Models
         public static int EliminardeGuardado(int idUsuario, int IdLibro)
         {
             int RegistrosEliminados = 0;
-            string sql = "DELETE FROM biblioteca * WHERE IdUsuario = @pIdUsuario and IdLibro = @pIdLibro";
+            string sql = "DELETE FROM biblioteca WHERE IdUsuario = @pIdUsuario and IdLibro = @pIdLibro";
             using(SqlConnection BD = new SqlConnection(_connectionString)){
                 RegistrosEliminados = BD.Execute(sql, new {pIdUsuario = idUsuario, pIdLibro = IdLibro});
             }

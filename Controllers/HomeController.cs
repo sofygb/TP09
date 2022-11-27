@@ -103,7 +103,7 @@ public class HomeController : Controller
             BD.CrearUsuario(usu);
             return RedirectToAction("Index");
         }
-        [HttpPost]
+        [HttpGet]
         public IActionResult GuardarLibro(int IdUsuario, int IdLibro)
         {
             if(BD.yaestabaguardado(IdUsuario, IdLibro) == false){
@@ -112,7 +112,7 @@ public class HomeController : Controller
             else{
                 BD.EliminardeGuardado(IdUsuario, IdLibro);
             }
-            return RedirectToAction("VerDetalleLibro");
+            return RedirectToAction("VerDetalleLibro", new {IdLibro=IdLibro});
         }
         [HttpPost]
         public IActionResult InicioSesion(Usuario usu)
@@ -194,7 +194,6 @@ public class HomeController : Controller
             }
             return View("VerDetalleLibro");
         }
-        
         public IActionResult EliminarLibro(int IdLibro)
         {
             ViewBag.Sesion = BD.HaySesion();
