@@ -37,6 +37,10 @@ public class HomeController : Controller
             ViewBag.Libro = BD.VerInfoLibro(IdLibro);
             ViewBag.Personajes = BD.ListarPersonajes(IdLibro);
             ViewBag.Sesion = BD.HaySesion();
+            if(BD.HaySesion() == true)
+            {
+            ViewBag.IdUsu = BD.UsuarioLogueado.IdUsuario;
+            }
             return View("VerDetalleLibro");
         }
         public IActionResult VerDetallePersonaje(int IdPersonaje)
@@ -180,7 +184,7 @@ public class HomeController : Controller
             BD.AgregarPersonaje(Pers);
             return RedirectToAction("VerDetalleLibro", new {IdLibro=Pers.IdLibro});
         }
-        
+        //xq acá no es RedirectToAction??
         public IActionResult EliminarPersonaje(int IdPersonaje, int IdLibro)
         {
             ViewBag.Sesion = BD.HaySesion();
@@ -202,9 +206,8 @@ public class HomeController : Controller
         [HttpPost]
         public IActionResult GuardarComentario(calificacion cal)
         {
-           ViewBag.Sesion = BD.HaySesion();
            BD.calificacionLibroAjax(cal);
-           return View("VerDetalleLibro");
+           return RedirectToAction("VerDetalleLibro", new {IdLibro=cal.IdLibro});
         }
 
         public IActionResult Privacy()

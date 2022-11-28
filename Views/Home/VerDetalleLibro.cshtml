@@ -115,6 +115,28 @@
             </div>
         </div>
         <p style="padding-top: 3rem;"><b>Reseñas: </b><br>
+        @{if(BD.UsuarioLogueado != null){
+            <div class="padding container-fluid">
+            <form method= "post" action = '@Url.Action("GuardarComentario","Home")' enctype="multipart/form-data">
+                <div class="Agregar">
+                    <div style="margin-left: 2rem; margin-right: 2rem; margin-bottom: 2rem;">
+                        <input type = "hidden" name = "IdLibro" value="@ViewBag.ElId">
+                        <input type = "hidden" name = "IdUsuario" value="@ViewBag.IdUsu">
+
+                        <label for="Estrellas"><b>Cant de estrellas:</b></label>
+                        <input type="textarea" style="margin-top: 2rem;" name="Estrellas">
+                        <br><br>
+                        
+                        <label for="Comentarios"><b>COMENTARIO:</b></label>
+                        <input type="textarea" name="Comentarios" required>
+                        <br><br>
+
+                        <button type="submit" class="btn btn-primary col-2 mb-2">Aceptar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        }}
     </div>
 <br>
 <br>
