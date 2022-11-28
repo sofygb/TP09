@@ -30,7 +30,10 @@ public class HomeController : Controller
             ViewBag.LibrosGuardados = BD.ListarLibrosdeBiblioteca(BD.UsuarioLogueado.IdUsuario);
             return View("Perfil");
         }
-
+        public Libro VerDetalleLibroAjax(int IdLibro)
+        {
+            return BD.VerInfoLibro(IdLibro);
+        }
         public IActionResult VerDetalleLibro(int IdLibro)
         {
             ViewBag.ElId = IdLibro;

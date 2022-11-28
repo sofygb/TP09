@@ -3,6 +3,27 @@
 
 // Write your JavaScript code.
 
+
+function mostrarinfolibrosencard(intlib)
+{
+    $.ajax(
+        {
+            type: 'GET',
+            dataType: 'JSON',
+            url: '/Home/VerDetalleLibroAjax',
+            data: { IdLibro: intlib },
+            success:
+                function (response)
+                {
+                    $("#TituloPrincipal").text(response.nombre);
+                    let body= "<b>Autor: </b>" + response.autor + "<br> <b>Sinopsis: </b>" + response.descripción + "<br>";
+                        $("#Cuerpo").html(body);
+                    
+                }
+        });
+}
+
+//mostrarComentatios y calificarLibro TIENEN QUE SER LA MISMA FUNCIÓN
 function mostrarComentatios(comment)
 {
     $.ajax(
