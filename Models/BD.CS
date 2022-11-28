@@ -17,8 +17,8 @@ namespace TP09.Models
         private static List<Libro> _ListadoLibros = new List<Libro>();
         private static List<calificacion> _ListadoCalificacion = new List<calificacion>();
         private static List<Usuario> _ListadoUsuario = new List<Usuario>();
-        
         private static List<Libro> _ListadoLibrosBiblioteca = new List<Libro>();
+        private static List<calificacion> _Comentarios = new List<calificacion>();
 
         public static Usuario UsuarioLogueado = null;
         private static bool haySesionAbierta = false;
@@ -222,7 +222,6 @@ namespace TP09.Models
             }
             return _ListadoLibros;
         }
-        
         public static List<Personaje> ListarPersonajes(int IdLibro)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){
@@ -231,7 +230,14 @@ namespace TP09.Models
             }
             return _ListadoPersonaje;
         }
-
+        public static List<calificacion> ListarComentarios(int IdLibro)
+        {
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                string sql = "SELECT * FROM Calificaciones WHERE IdLibro = @libroselect";
+                _Comentarios = BD.Query<calificacion>(sql, new {libroselect = IdLibro}).ToList();
+            }
+            return _Comentarios;
+        }
         public static List<calificacion> calificacionLibroAjax(calificacion cal)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){

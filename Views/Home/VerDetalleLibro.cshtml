@@ -114,7 +114,20 @@
             <br><br>
             </div>
         </div>
-        <p style="padding-top: 3rem;"><b>Reseñas: </b><br>
+
+        <p style="padding-top: 3rem; padding-bottom: 0.5rem"><b>Reseñas: </b>
+
+        @{foreach(calificacion cal in ViewBag.Calificaciones){
+            <div class="row">
+                <div class="col-lx-12 col-12" style="padding-bottom: 2 rem;">
+                    <div class="Agregar2" style="padding: 1rem;">
+                        <p style="padding: 0.5rem;">@cal.Comentarios</p>
+                        <p style="padding: 0.5rem;">@cal.Estrellas</p>
+                    </div>
+                </div>
+            </div>
+        }}
+
         @{if(BD.UsuarioLogueado != null){
             <div class="padding container-fluid">
             <form method= "post" action = '@Url.Action("GuardarComentario","Home")' enctype="multipart/form-data">

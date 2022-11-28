@@ -37,6 +37,7 @@ public class HomeController : Controller
             ViewBag.Libro = BD.VerInfoLibro(IdLibro);
             ViewBag.Personajes = BD.ListarPersonajes(IdLibro);
             ViewBag.Sesion = BD.HaySesion();
+            ViewBag.Calificaciones = BD.ListarComentarios(IdLibro);
             if(BD.HaySesion() == true)
             {
             ViewBag.IdUsu = BD.UsuarioLogueado.IdUsuario;
