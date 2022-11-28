@@ -26,7 +26,7 @@
     <section class="container-fluid"> 
       
         <div class=" swiper mySwiper container swiper-container" style="text-align:center;">
-            <div class="swiper-wrapper content">
+            <div class="swiper-wrapper content maxtam">
                 @{
                     foreach(Libro BuscarLibro in ViewBag.ListadoLibros){
                         <div class="swiper-slide card">
@@ -35,7 +35,7 @@
                                   <img class="imagenes" src="/img/@BuscarLibro.Portada" alt="">
                                 </div>
 
-                                <div class="name-profession" style="min-height:35%;">
+                                <div class="name-profession" style="min-height:85px;">
                                   <span class="name">@BuscarLibro.Nombre</span>
                                   <span class="profession">@BuscarLibro.Autor</span>
                                 </div>
@@ -72,19 +72,17 @@
                 }   
             }
           </div>
-          <div class="row">
-          <div class="AgregarLibro">
-            @{if(ViewBag.Sesion == true){
-              <a href='@Url.Action("AgregarLibro", "Home")' class="btn hireMe pos diseñodeagregar col-3 mb-3">Agregar Libro   +</a>
+            <div class="AgregarLibro">
+              @{if(ViewBag.Sesion == true){
+                <a href='@Url.Action("AgregarLibro", "Home")' class="pos diseñodeagregar col-12 col-xl-2">Agregar Libro   +</a>
+                }
+                else{
+                  <button type="button" class="pos diseñodeagregar col-12 col-xl-2" data-toggle="modal" data-target="#exampleModalCenter">
+                    Agregar Libro +
+                  </button>
+                }
               }
-              else{
-                <button type="button" class="btn hireMe pos diseñodeagregar col-3 mb-3" data-toggle="modal" data-target="#exampleModalCenter">
-                  Agregar Libro   +
-                </button>
-              }
-            }
-          </div>
-          </div>
+            </div>
         </div>
       
       <div class="swiper-button-next"></div>
@@ -103,7 +101,7 @@
               Usted no puede eliminar, ni modificar ningun objeto debido a que no inicio sesión. Por favor registrate o create una cuenta!!
             </div>
             <div class="modal-footer">
-              <a href='@Url.Action("CrearCuenta", "Home")' class="pos diseñodeagregar col-12 col-xl-4 style="text-align: center;">Iniciar Sesión</a>
+              <a href='@Url.Action("CrearCuenta", "Home")' style="text-align: center;" class="pos diseñodeagregar col-12 col-xl-4">Iniciar Sesión</a>
               <button type="button" class="pos diseñodeeliminar col-12 col-xl-3" data-dismiss="modal">Close</button>
             </div>
           </div>
