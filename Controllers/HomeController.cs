@@ -117,6 +117,17 @@ public class HomeController : Controller
             }
             return RedirectToAction("VerDetalleLibro", new {IdLibro=IdLibro});
         }
+        [HttpGet]
+        public IActionResult GuardarLibroEnBibliotecaperoparacuandoestaenelperfil(int IdUsuario, int IdLibro)
+        {
+            if(BD.yaestabaguardado(IdUsuario, IdLibro) == false){
+                BD.GuardarLibro(IdUsuario, IdLibro);
+            }
+            else{
+                BD.EliminardeGuardado(IdUsuario, IdLibro);
+            }
+            return RedirectToAction("Perfil");
+        }
         [HttpPost]
         public IActionResult InicioSesion(Usuario usu)
         {

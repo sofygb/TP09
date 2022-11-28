@@ -148,10 +148,28 @@ h1, h2, h3, h4, h5,h6,p{
   max-height: 100%;
   height: 250px;
 }
-.tamañodelasportadasenperfil{
+.tamañofotosenperfil{
   max-width: 150%;
   max-height: 150%;
   height: 400px;
+}
+
+.tengosueñoayuda{
+  max-width: 150%;
+  max-height: 150%;
+  height: 666px;
+}
+
+.zzz{
+  position: absolute;
+  left: 43%;
+}
+
+.abajo{
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  padding-bottom: 2rem;
 }
 
 .iconoGuardar2{

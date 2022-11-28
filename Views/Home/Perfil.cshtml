@@ -37,25 +37,30 @@
                 </div>
 
                 <h3 style="padding-top: 2rem;"><b>Libros guardados:</b></h3>
-                        <div class="row" style="margin-left: 0.1rem;">
+                        <div class="row centrarElementos" style="margin-left: 0.1rem;">
                             @{
                                 if(BD.haylibrosguardadosensuperfil(BD.UsuarioLogueado.IdUsuario) == true)
                                 {
                                     foreach(Libro bib in ViewBag.LibrosGuardados){
-                                        <div class="col-md-4 cardy">
+                                        <div class="col-md-4 cardy tengosueñoayuda">
                                             <div class="card" style="width: 18rem;">
-                                                <img src="/img/@bib.Portada" class="card-img-top tamañodelasportadasenperfil" alt="Portada">
+                                                <img src="/img/@bib.Portada" class="card-img-top tamañofotosenperfil" alt="Portada">
                                                 <div class="card-body">
                                                     <div class="row">
-                                                        <div class="col-md-6 text-left">
-                                                            <h3 class="card-title" style="color: black;">@bib.Nombre</h3>
+                                                        <div class="col-md-12 text-center">
+                                                            <h4 class="card-title" style="color: black;"><b>@bib.Nombre</b></h4>
+                                                            <h6 class="text-center" style="color: black;"><b>@bib.Autor</b></h6>
+                                                        </div> <br><br>
+
+                                                        <div style="padding: 0.3rem; display: flex;justify-content: flex-start;align-items: center;">
+                                                            <a href='@Url.Action("GuardarLibroEnBibliotecaperoparacuandoestaenelperfil", "Home", new {IdUsuario = BD.UsuarioLogueado.IdUsuario, IdLibro = bib.IdLibro})' class="zzz" alt="">
+                                                                <img src="/img/guardar-en-instagram.png" class="iconoGuardar2">
+                                                            </a>
                                                         </div>
-                                                        <div class="col-md"></div>
-                                                        <div class="col-md-2 derecha" style="justify-content: flex-end;">
-                                                            
+                                                        <div style="padding: 2rem;">
+                                                            <a href='@Url.Action("VerDetalleLibro", "Home", new {IdLibro = bib.IdLibro})' class="diseñodeagregar abajo col-12" style="text-align: center" role="button" >Más info</a>
                                                         </div>
                                                     </div>
-                                                    
                                                 </div>
                                             </div>
                                         </div>

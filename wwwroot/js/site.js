@@ -3,6 +3,23 @@
 
 // Write your JavaScript code.
 
+function mostrarComentatios(comment)
+{
+    $.ajax(
+        {
+            type: 'GET',
+            dataType: 'JSON',
+            url: '/Home/calificacionLibroAjax',
+            data: {comentarios: comment},
+            success: function (response)
+                {
+                    $("#Comentarios").text(response.comentarios);
+                    let body= response.comentarios;
+                        $("#Cuerpo").html(body);
+                    }
+        });
+}
+
 function calificarLibro(cal)
 {
     $.ajax(
@@ -38,23 +55,6 @@ $(function() {
 	});
 
 });
-
-function mostrarComentatios(comment)
-{
-    $.ajax(
-        {
-            type: 'GET',
-            dataType: 'JSON',
-            url: '/Home/calificacionLibroAjax',
-            data: {comentarios: comment},
-            success: function (response)
-                {
-                    $("#Comentarios").text(response.comentarios);
-                    let body= response.comentarios;
-                        $("#Cuerpo").html(body);
-                    }
-        });
-}
 
 function jsCancelSubmission()
 {
