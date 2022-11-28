@@ -57,7 +57,7 @@ public class HomeController : Controller
             ViewBag.ListadoPersonaje = BD.VerInfoPersonaje(IdLibro);
             return View("AgregarPersonaje");
         }
-        //q es esto??
+
         public IActionResult AgregarLibro()
         {
             if (BD.UsuarioLogueado == null)
@@ -107,7 +107,7 @@ public class HomeController : Controller
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public IActionResult GuardarLibro(int IdUsuario, int IdLibro)
+        public IActionResult GuardarLibroEnBiblioteca(int IdUsuario, int IdLibro)
         {
             if(BD.yaestabaguardado(IdUsuario, IdLibro) == false){
                 BD.GuardarLibro(IdUsuario, IdLibro);
@@ -167,7 +167,7 @@ public class HomeController : Controller
                 Pers.Contraportada = Contraportada.FileName;
             }
             BD.AgregarLibro(Pers);
-            return View("Index");
+            return RedirectToAction("Index");
         }
         [HttpPost]
         public IActionResult GuardarPersonaje(Personaje Pers, IFormFile Foto)

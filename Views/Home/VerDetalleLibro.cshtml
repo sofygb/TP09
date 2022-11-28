@@ -21,12 +21,12 @@
                         {
                             if(BD.yaestabaguardado(BD.UsuarioLogueado.IdUsuario, ViewBag.Libro.IdLibro) == false)
                             {
-                                <a href='@Url.Action("GuardarLibro", "Home", new {IdUsuario = BD.UsuarioLogueado.IdUsuario, IdLibro = ViewBag.Libro.IdLibro})' class="" alt="">
+                                <a href='@Url.Action("GuardarLibroEnBiblioteca", "Home", new {IdUsuario = BD.UsuarioLogueado.IdUsuario, IdLibro = ViewBag.Libro.IdLibro})' class="" alt="">
                                     <img src="/img/singuardar.png" class="iconoGuardar2">
                                 </a>
                             }
                             else{
-                                <a href='@Url.Action("GuardarLibro", "Home", new {IdUsuario = BD.UsuarioLogueado.IdUsuario, IdLibro = ViewBag.Libro.IdLibro})' class="" alt="">
+                                <a href='@Url.Action("GuardarLibroEnBiblioteca", "Home", new {IdUsuario = BD.UsuarioLogueado.IdUsuario, IdLibro = ViewBag.Libro.IdLibro})' class="" alt="">
                                     <img src="/img/guardar.png" class="iconoGuardar2">
                                 </a>
                             }
@@ -49,7 +49,8 @@
                         <p><b>Advertencias este libro contiene:</b><br>@ViewBag.Libro.TW</p>
                     }
                 }
-                <p><b>Genero:</b><br>@ViewBag.Libro.GeneroPrincipal</p>
+                <p><b>Genero principal:</b><br>@ViewBag.Libro.GeneroPrincipal</p>
+                <p><b>Otros generos:</b><br>@ViewBag.Libro.Generos</p>
                 <p><b>Cantidad de páginas que contiene el libro:</b><br>@ViewBag.Libro.CantPaginas</p>
                 @{
                     if(@ViewBag.Libro.CantLibros > 1){
