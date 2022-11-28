@@ -25,12 +25,14 @@
                             <li class="nav-item"> 
                                 <a class="nav-link text-dark" asp-area="" asp-action="Privacy">Sobre nosotras</a>
                             </li>
-                            <div class="silohagosoydios">
+                            <div class="tristeza">
                                 <li class="nav-item dropdown">
                                     @if (BD.UsuarioLogueado==null)
                                     {
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CrearCuenta">Iniciar Sesión</a>
-                                    } 
+                                        <div class="">
+                                            <a class="nav-link text-dark tristeza" asp-area="" asp-controller="Home" asp-action="CrearCuenta">Iniciar Sesión</a>
+                                        </div>
+                                    }
                                     else
                                     {
                                         <div>

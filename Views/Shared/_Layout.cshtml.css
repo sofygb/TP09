@@ -11,16 +11,16 @@ a {
   color: #000000;
 }
 
-.silohagosoydios{
+.tristeza{
   position: absolute;
-  right: 10rem;
-  bottom: 0.3rem;
+  right: 5rem;
+  bottom: 18px;
 }
 
 .tamañofotoperfilmax{
-  max-width: 60%;
-  max-height: 60%;
-  height: 50px;
+  max-width: 40%;
+  max-height: 40%;
+  height: 20px;
 }
 
 .mover{
