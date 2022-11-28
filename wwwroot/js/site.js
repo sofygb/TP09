@@ -41,7 +41,7 @@ function mostrarComentatios(comment)
         });
 }
 
-function mostrarCaificacionesLibro(cal)
+function mostrarCaificacionesLibro(IdL)
 {
     $.ajax(
         {
