@@ -53,7 +53,7 @@ function mostrarCaificacionesLibro(IdL)
                 {
                     $("#Calificacion").text(response.estrellas);
 	            $("#Comentarios").text(response.comentarios);
-                    let body= response.comentarios;
+                    let body= response.estrellas + "<br>" + response.comentarios;
                     $("#Cuerpo").html(body);
                     }
         });
