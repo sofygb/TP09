@@ -41,7 +41,7 @@ function mostrarComentatios(comment)
         });
 }
 
-function calificacionLibroAjax(IdL)
+function VerDetallelibroajax(IdL)
 {
     $.ajax(
         {
