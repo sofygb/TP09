@@ -276,3 +276,10 @@ button.accept-policy {
   padding: 1rem 0;
   margin-bottom: 0%;
 }
+
+@media (min-width: 700px){
+  .diseñodeltituloprincipal{
+    width: 100% !important;
+  }
+}
+

@@ -140,8 +140,8 @@ h1, h2, h3, h4, h5,h6,p{
 
 .imagenes{
   max-width: 105%;
-  max-height: 200%;
-  height: 400px;
+  max-height: 1000%;
+  height: 200%;
 }
 .imagenes2{
   max-width: 100%;
@@ -521,7 +521,7 @@ section{
   position: relative;
   background: #fff;
   border-radius: 20px;
-  margin: 20px 0;
+  margin: 15% 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -530,14 +530,14 @@ section{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 10%;
   position: relative;
   z-index: 100;
 }
 
 section .card .image{
-  height: 140px;
-  width: 140px;
+  height: 80%;
+  width: 100%;
   border-radius: 50%;
   padding: 3px;
   background: #7d2ae8;
@@ -613,9 +613,9 @@ section .card .image img{
   outline: none;
   border: none;
   color: #fff;
-  padding: 8px 22px;
+  padding: 4% 9%;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 90%;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -645,3 +645,11 @@ section .card .image img{
   opacity: 1;
   color: #7d2ae8;
 }
+@media (max-width: 765px){
+  .card{
+    margin-top: 300px !important;
+    width: 300px !important;
+    height:641px !important;
+  }
+}
+

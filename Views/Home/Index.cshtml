@@ -23,93 +23,94 @@
     <div class="text-center padding2">
         <h1 class="display-4 diseñodeltituloprincipal">Tu biblioteca online</h1>
     </div>
-  <section class="container-fluid">
-    
-    <div class="swiper mySwiper container" style="text-align:center;">
-        <div class="swiper-wrapper content">
-            @{
-                foreach(Libro BuscarLibro in ViewBag.ListadoLibros){
-                    <div class="swiper-slide card">
-                        <div class="card-content">
-                            <div>
-                              <img class="imagenes" src="/img/@BuscarLibro.Portada" alt="">
-                            </div>
+    <section class="container-fluid"> 
+      
+        <div class=" swiper mySwiper container swiper-container" style="text-align:center;">
+            <div class="swiper-wrapper content">
+                @{
+                    foreach(Libro BuscarLibro in ViewBag.ListadoLibros){
+                        <div class="swiper-slide card">
+                            <div class="card-content">
+                                <div>
+                                  <img class="imagenes" src="/img/@BuscarLibro.Portada" alt="">
+                                </div>
 
-                            <div class="name-profession" style="min-height:85px;">
-                              <span class="name">@BuscarLibro.Nombre</span>
-                              <span class="profession">@BuscarLibro.Autor</span>
-                            </div>
+                                <div class="name-profession" style="min-height:35%;">
+                                  <span class="name">@BuscarLibro.Nombre</span>
+                                  <span class="profession">@BuscarLibro.Autor</span>
+                                </div>
 
-                            <div class="rating">
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="far fa-star"></i>
-                              <i class="far fa-star"></i>
-                            </div>
-                            
-                            <div class="button">
-                              <button>
-                                  <a href='@Url.Action("VerDetalleLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})'class="Basta">Más info</a>
-                              </button>
-                              
-                              @{if(ViewBag.Sesion == true)
-                                {
+                                <div class="rating">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                </div>
+                                
+                                <div class="button">
                                   <button>
-                                    <a href='@Url.Action("EliminarLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})' class="Basta hireMe">Eliminar</a>
+                                      <a href='@Url.Action("VerDetalleLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})'class="Basta">Más info</a>
                                   </button>
-                                }
-                                else{
-                                    <button type="button" class="btn hireMe" data-toggle="modal" data-target="#exampleModalCenter">
-                                      Eliminar
-                                    </button>
-                                }
-                              }
-                            </div>
-                      </div>
-                      
-                  </div>            
-            }   
-        }
-      </div>
-
-      <div class="AgregarLibro">
-        @{if(ViewBag.Sesion == true){
-          <a href='@Url.Action("AgregarLibro", "Home")' class="btn hireMe pos diseñodeagregar col-2 mb-2">Agregar Libro  +</a>
-          }
-          else{
-            <button type="button" class="btn hireMe pos diseñodeagregar col-2 mb-2" data-toggle="modal" data-target="#exampleModalCenter">
-              Agregar Libro  +
-            </button>
-          }
-        }
-      </div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle" style="color: black;">¡Error!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+                                  
+                                  @{if(ViewBag.Sesion == true)
+                                    {
+                                      <button>
+                                        <a href='@Url.Action("EliminarLibro", "Home", new {IdLibro = BuscarLibro.IdLibro})' class="Basta hireMe">Eliminar</a>
+                                      </button>
+                                    }
+                                    else{
+                                        <button type="button" class="btn hireMe" data-toggle="modal" data-target="#exampleModalCenter">
+                                          Eliminar
+                                        </button>
+                                    }
+                                  }
+                                </div>
+                          </div>
+                          
+                      </div>            
+                }   
+            }
           </div>
-          <div class="modal-body">
-            Usted no puede eliminar, ni modificar ningun objeto debido a que no inicio sesión. Por favor registrate o create una cuenta!!
+          <div class="row">
+          <div class="AgregarLibro">
+            @{if(ViewBag.Sesion == true){
+              <a href='@Url.Action("AgregarLibro", "Home")' class="btn hireMe pos diseñodeagregar col-3 mb-3">Agregar Libro   +</a>
+              }
+              else{
+                <button type="button" class="btn hireMe pos diseñodeagregar col-3 mb-3" data-toggle="modal" data-target="#exampleModalCenter">
+                  Agregar Libro   +
+                </button>
+              }
+            }
           </div>
-          <div class="modal-footer">
-            <a href='@Url.Action("CrearCuenta", "Home")' class="pos diseñodeagregar col-12 col-xl-4
-            " style="text-align: center;">Iniciar Sesión</a>
-            <button type="button" class="pos diseñodeeliminar col-12 col-xl-3" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle" style="color: black;">¡Error!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Usted no puede eliminar, ni modificar ningun objeto debido a que no inicio sesión. Por favor registrate o create una cuenta!!
+            </div>
+            <div class="modal-footer">
+              <a href='@Url.Action("CrearCuenta", "Home")' class="pos diseñodeagregar col-12 col-xl-4 style="text-align: center;">Iniciar Sesión</a>
+              <button type="button" class="pos diseñodeeliminar col-12 col-xl-3" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </section>
+    </section>
 
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
