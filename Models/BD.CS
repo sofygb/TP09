@@ -22,7 +22,6 @@ namespace TP09.Models
 
         public static Usuario UsuarioLogueado = null;
         private static bool haySesionAbierta = false;
-        private static bool hayFotoDePerfil = false;
 
         public static string NombraImagen()
         {
@@ -31,30 +30,6 @@ namespace TP09.Models
         public static bool HaySesion()
         {
             return haySesionAbierta;
-        }
-        public static Usuario VerPerfil(int IdUsuario)
-        {
-            Usuario usua;
-            using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "SELECT * FROM Usuario WHERE IdUsuario = @pIdUsuario";
-                usua = BD.QueryFirstOrDefault<Usuario>(sql, new {pIdUsuario = IdUsuario});
-            }
-            return usua;
-        }
-        public static bool HayFotoDePerfil(int IdUsuario)
-        {
-            using(SqlConnection BD = new SqlConnection(_connectionString)){
-                string sql = "SELECT FotoDePerfil FROM Usuario WHERE IdUsuario = @pIdUsuario";
-                UsuarioLogueado = BD.QueryFirstOrDefault<Usuario>(sql, new {pIdUsuario = IdUsuario});
-            }
-            if(UsuarioLogueado.FotoDePerfil != "null")
-            {
-                hayFotoDePerfil = true;
-            }
-            else{
-                hayFotoDePerfil = false;
-            }
-            return hayFotoDePerfil;
         }
         public static bool haypersonaje(int IdLibro)
         {
