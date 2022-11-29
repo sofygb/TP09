@@ -213,6 +213,15 @@ namespace TP09.Models
             }
             return _Comentarios;
         }
+        public static Usuario QuienEscribioElComentario(int IdComentario)
+        {
+            Usuario us = null;
+            string sp = "sp_QuienHizoElComentario";
+            using(SqlConnection BD = new SqlConnection(_connectionString)){
+                us = BD.QueryFirstOrDefault<Usuario>(sp, new {IdComentario = IdComentario},  commandType: CommandType.StoredProcedure);
+            }
+            return us;
+        }
         public static List<calificacion> calificacionLibroAjax(calificacion cal)
         {
             using(SqlConnection BD = new SqlConnection(_connectionString)){

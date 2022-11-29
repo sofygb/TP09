@@ -122,7 +122,17 @@
             <div class="row">
                 <div class="col-lx-12 col-12" style="padding-bottom: 2 rem;">
                     <div class="Agregar2" style="padding: 1rem;">
-                        <p style="padding: 0.5rem;"><b>Comentario:</b> @cal.Comentarios</p>
+                        @if(BD.QuienEscribioElComentario(cal.IdCalificacion).FotoDePerfil == null)
+                        {
+                            <img src="/img/iconogrande.png">
+                        }
+                        else
+                        {
+                            <img src="/img/@BD.QuienEscribioElComentario(cal.IdCalificacion).FotoDePerfil" style="width:60px;" class="rounded-circle tamañofotoperfilmax">
+                        }
+                        <br><br>
+                        <h5 style="padding-left: 0.5rem;"><b>@BD.QuienEscribioElComentario(cal.IdCalificacion).NombreDeUsuario</b> ha comentado...</h5>
+                        <p style="padding-left: 12rem;">@cal.Comentarios</p>
                         <p style="padding: 0.5rem;"><b>Estrellas:</b> @cal.Estrellas</p>
                     </div>
                 </div>
