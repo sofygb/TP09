@@ -41,19 +41,20 @@ function mostrarComentatios(comment)
         });
 }
 
-function calificarLibro(cal)
+function VerDetallelibroajax(IdL)
 {
     $.ajax(
         {
             type: 'GET',
             dataType: 'JSON',
             url: '/Home/calificacionLibroAjax',
-            data: {likes: cal},
+            data: {IdLibro: IdL},
             success: function (response)
                 {
-                    $("#Calificacion").text(response.likes);
-                    let body= response.likes;
-                        $("#Cuerpo").html(body);
+                    $("#Calificacion").text(response.estrellas);
+	            $("#Comentarios").text(response.comentarios);
+                    let body= response.estrellas + "<br>" + response.comentarios;
+                    $("#Cuerpo").html(body);
                     }
         });
 }
