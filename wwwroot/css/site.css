@@ -656,7 +656,6 @@ section .card .image img{
 }
 @media (max-width: 765px){
   .card{
-    margin-top: 300px !important;
     width: 300px !important;
     height:641px !important;
   }
